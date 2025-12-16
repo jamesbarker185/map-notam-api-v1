@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: map-notam-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data_fresh:/data/db
+
+  notam-ingest:
+    build: .
+    container_name: map-notam-ingest
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/
+    env_file:
+      - .env
+
+  notam-api:
+    build: .
+    container_name: map-notam-api
+    command: uvicorn app.api:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/
+    env_file:
+      - .env
+
+
+volumes:
+  mongo_data_fresh:

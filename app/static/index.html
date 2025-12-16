@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTAM Search</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent-color), #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .search-card {
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        input {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+            width: 150px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        #results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0 0.5rem;
+        }
+
+        #count-display {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .notam-card {
+            background-color: var(--card-bg);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .notam-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--text-secondary);
+        }
+
+        .notam-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        .notam-id {
+            font-family: monospace;
+            font-weight: 700;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .notam-type {
+            font-size: 0.75rem;
+            background-color: var(--bg-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: 1rem;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+        }
+
+        .notam-body {
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .loading {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NOTAM Explorer</h1>
+            <p style="color: var(--text-secondary);">Search for active NOTAMs by geographic location</p>
+        </header>
+
+        <section class="search-card">
+            <form id="search-form" class="input-group">
+                <div class="input-wrapper">
+                    <label for="lat">Latitude</label>
+                    <input type="number" id="lat" step="any" placeholder="42.466" required value="42.466">
+                </div>
+                <div class="input-wrapper">
+                    <label for="lon">Longitude</label>
+                    <input type="number" id="lon" step="any" placeholder="-71.283" required value="-71.283">
+                </div>
+                <div class="input-wrapper">
+                    <label for="radius">Radius (NM)</label>
+                    <input type="number" id="radius" step="any" placeholder="10" required value="10">
+                </div>
+                <button type="submit" id="search-btn">Search</button>
+            </form>
+        </section>
+
+        <section id="results-area" style="display: none;">
+            <div id="results-header">
+                <h2 style="margin: 0;">Results</h2>
+                <span id="count-display">Found: 0</span>
+            </div>
+            <div id="results-container" class="results-grid"></div>
+        </section>
+    </div>
+
+    <script>
+        const form = document.getElementById('search-form');
+        const resultsArea = document.getElementById('results-area');
+        const resultsContainer = document.getElementById('results-container');
+        const countDisplay = document.getElementById('count-display');
+        const searchBtn = document.getElementById('search-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const lat = document.getElementById('lat').value;
+            const lon = document.getElementById('lon').value;
+            const radius = document.getElementById('radius').value;
+
+            searchBtn.textContent = 'Searching...';
+            searchBtn.classList.add('loading');
+            resultsArea.style.display = 'none';
+            resultsContainer.innerHTML = '';
+
+            try {
+                const response = await fetch(`/api/search?lat=${lat}&lon=${lon}&radius=${radius}`);
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const data = await response.json();
+                
+                countDisplay.textContent = `Found: ${data.count} NOTAMs`;
+                
+                if (data.results && data.results.length > 0) {
+                    data.results.forEach(notam => {
+                        const card = document.createElement('div');
+                        card.className = 'notam-card';
+                        
+                        const text = notam.text || 'No text available';
+                        const number = notam.number || 'UNKNOWN';
+                        const type = notam.classification || 'NOTAM';
+                        
+                        card.innerHTML = `
+                            <div class="notam-header">
+                                <span class="notam-id">${number}</span>
+                                <span class="notam-type">${type}</span>
+                            </div>
+                            <div class="notam-body">${text}</div>
+                        `;
+                        resultsContainer.appendChild(card);
+                    });
+                } else {
+                    resultsContainer.innerHTML = '<p style="color: var(--text-secondary); grid-column: 1/-1; text-align: center;">No NOTAMs found in this area.</p>';
+                }
+                
+                resultsArea.style.display = 'block';
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to fetch NOTAMs. Make sure the backend is running.');
+            } finally {
+                searchBtn.textContent = 'Search';
+                searchBtn.classList.remove('loading');
+            }
+        });
+    </script>
+</body>
+</html>

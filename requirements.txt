@@ -1,0 +1,7 @@
+solace-pubsubplus
+python-dotenv
+pymongo
+defusedxml
+certifi
+fastapi
+uvicorn
