@@ -11,7 +11,15 @@ from solace.messaging.receiver.message_receiver import MessageHandler, InboundMe
 load_dotenv()
 
 # Constants
-OUTPUT_FILE = "raw_notam_dump.xml"
+# Constants
+DATA_DIR = os.getenv("DATA_DIR", "data")
+if not os.path.exists(DATA_DIR):
+    try:
+        os.makedirs(DATA_DIR)
+    except OSError:
+        pass # Might be read-only or exists
+        
+OUTPUT_FILE = os.path.join(DATA_DIR, "raw_notam_dump.xml")
 TIMEOUT_SECONDS = 60  # Initial wait time
 SILENCE_TIMEOUT = 5   # Stop if no new messages for X seconds
 

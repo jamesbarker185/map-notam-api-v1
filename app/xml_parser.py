@@ -113,6 +113,11 @@ def _extract_notams_from_root(root):
             clean_text = text.replace('\n', ' ').replace('\r', ' ')
             q_line_data = NotamTextParser.parse_q_line(clean_text)
 
+        if q_line_data:
+            print(f"  [DEBUG] Found Q-Line for {full_number}: {q_line_data['lower_fl']}/{q_line_data['upper_fl']}")
+        else:
+            print(f"  [DEBUG] NO Q-Line for {full_number}")
+
         # Better Date Parsing
         # If the XML fields are missing or look invalid, parses from text
         # Prefer full_text (from translation) as it contains B) and C) lines more reliably

@@ -51,8 +51,41 @@ services:
       - mongo
     environment:
       - MONGO_URI=mongodb://mongo:27017/
+      - DATA_DIR=/app/data
     env_file:
       - .env
+    volumes:
+      - ./data:/app/data
+
+  # 5. Maintenance: Clear Database
+  clear-db:
+    build: .
+    container_name: map-notam-clear-db
+    command: python scripts/clear_db.py
+    profiles: ["maintenance"]
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/
+      - CONFIRM_CLEAR=true
+    env_file:
+      - .env
+
+  # 6. Maintenance: Reparse Existing Data (No Fetch)
+  reparse:
+    build: .
+    container_name: map-notam-reparse
+    command: python scripts/load_data.py
+    profiles: ["maintenance"]
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/
+      - DATA_DIR=/app/data
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
 
 volumes:
   mongo_data_prod:

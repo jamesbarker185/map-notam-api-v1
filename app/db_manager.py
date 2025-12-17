@@ -21,6 +21,16 @@ class DBManager:
         self.collection.create_index([("location", GEOSPHERE)])
         print("Index ensure complete.")
         
+    def clear_db(self):
+        """
+        Drops the Notam collection.
+        """
+        print(f"Dropping collection '{COLLECTION_NAME}'...")
+        self.collection.drop()
+        print("Collection dropped.")
+        self.init_db() # Re-init indexes
+
+        
     def insert_notam(self, notam_doc):
         """
         Inserts or updates a NOTAM document.

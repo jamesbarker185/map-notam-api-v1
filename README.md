@@ -77,12 +77,36 @@ docker-compose up -d
 *   **map-notam-listener**: Connects to FAA SWIM and ingests data in real-time.
 *   **map-notam-mongo**: Stores data with geospatial indexing.
 
-### 3. Initial Data Seed (Optional)
-To fetch a historical snapshot first (resetting the DB effectively):
+### 3. Data Management (Maintenance)
+You can manage the database state using the provided utility containers.
+
+**A. Clear Database**
+To completely wipe all current data:
 ```bash
-docker-compose run snapshot
+docker-compose run --rm clear-db
 ```
-*   This connects to the queue, downloads a batch of messages to `raw_notam_dump.xml`, and bulk loads them.
+*   *Warning: This action is irreversible.*
+
+**B. Fetch Snapshot (Initial Seed)**
+To fetch new messages from the queue and populate the DB:
+```bash
+docker-compose run --rm snapshot
+```
+*   Fetches messages to `./data/raw_notam_dump.xml` (persisted on host).
+*   Parses and loads them into MongoDB.
+
+**C. Reparse Existing Data**
+To re-process data that has already been downloaded (without connecting to the queue):
+```bash
+docker-compose run --rm reparse
+```
+*   Reads from `./data/raw_notam_dump.xml`.
+*   Useful if you have updated parsing logic (e.g., regex fixes) and want to apply it to existing raw files.
+
+**Important**: After running these maintenance tasks, ensure your main API service is running:
+```bash
+docker-compose up -d
+```
 
 ### 4. API Usage
 The service exposes a standard GeoJSON endpoint suitable for any map client (Mapbox, Leaflet, OpenLayers).

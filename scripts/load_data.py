@@ -19,5 +19,21 @@ def load_xml_to_db(file_path):
     print(f"Successfully loaded {count} NOTAMs into MongoDB.")
     print(f"Total documents in DB: {db.get_count()}")
 
+
 if __name__ == "__main__":
-    load_xml_to_db("raw_notam_dump.xml")
+    # Check for file in data dir or current dir
+    data_dir = os.getenv("DATA_DIR", "data")
+    filename = "raw_notam_dump.xml"
+    
+    path = os.path.join(data_dir, filename)
+    if not os.path.exists(path):
+        # Fallback to current dir
+        if os.path.exists(filename):
+            path = filename
+        else:
+            # Ensure data dir exists if we are going to write (this is load, so read)
+            # If neither exists, error
+            print(f"Error: Could not find {filename} in {data_dir} or .")
+            sys.exit(1)
+            
+    load_xml_to_db(path)
