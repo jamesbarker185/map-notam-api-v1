@@ -7,6 +7,8 @@
     <!-- Mapbox GL JS -->
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+    <!-- Turf.js for Geospatial Calcs -->
+    <script src="https://unpkg.com/@turf/turf/turf.min.js"></script>
     <style>
         body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
         #map { position: absolute; top: 0; bottom: 0; width: 100%; }
@@ -225,6 +227,34 @@
     });
 
     function setupLayers() {
+        // Add Search Area Source (Circle)
+        map.addSource('search-area', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+        
+        // Search Area Fill (Faint)
+        map.addLayer({
+            'id': 'search-area-fill',
+            'type': 'fill',
+            'source': 'search-area',
+            'layout': {},
+            'paint': {
+                'fill-color': '#4dabf7',
+                'fill-opacity': 0.15
+            }
+        });
+        
+        // Search Area Outline (Dashed)
+        map.addLayer({
+            'id': 'search-area-outline',
+            'type': 'line',
+            'source': 'search-area',
+            'layout': {},
+            'paint': {
+                'line-color': '#339af0',
+                'line-dasharray': [4, 4],
+                'line-width': 2
+            }
+        });
+
         // Add source for NOTAMs
         map.addSource('notams', {
             type: 'geojson',
@@ -316,25 +346,66 @@
 
         map.on('mouseenter', 'notam-points', showPopup);
         map.on('mouseleave', 'notam-points', hidePopup);
-        map.on('mouseenter', 'notam-areas', showPopup);
-        map.on('mouseleave', 'notam-areas', hidePopup);
+        map.on('mouseenter', 'notam-polygons', showPopup);
+        map.on('mouseleave', 'notam-polygons', hidePopup);
+
+        // Add click handlers for popups (Logic omitted for brevity, existing handlers remain)
+        map.on('click', 'notam-polygons', (e) => showPopup(e));
+        map.on('click', 'notam-points', (e) => showPopup(e));
+        
+        // Mouse cursor
+        map.on('mouseenter', 'notam-polygons', () => map.getCanvas().style.cursor = 'pointer');
+        map.on('mouseleave', 'notam-polygons', () => map.getCanvas().style.cursor = '');
+        map.on('mouseenter', 'notam-points', () => map.getCanvas().style.cursor = 'pointer');
+        map.on('mouseleave', 'notam-points', () => map.getCanvas().style.cursor = '');
+
     }
 
-    async function searchNotams() {
-        const lat = document.getElementById('latInput').value;
-        const lon = document.getElementById('lonInput').value;
-        const radius = document.getElementById('radiusInput').value;
+    // Click to search
+    map.on('click', (e) => {
+        document.getElementById('latInput').value = e.lngLat.lat.toFixed(4);
+        document.getElementById('lonInput').value = e.lngLat.lng.toFixed(4);
         
+        // Update marker
+        if (currentMarker) currentMarker.remove();
+        currentMarker = new mapboxgl.Marker({ color: "#FF0000" })
+            .setLngLat(e.lngLat)
+            .addTo(map);
+            
+        searchNotams();
+    });
+
+    async function searchNotams() {
+        const lat = parseFloat(document.getElementById('latInput').value);
+        const lon = parseFloat(document.getElementById('lonInput').value);
+        const radius = parseFloat(document.getElementById('radiusInput').value); // Nautical Miles
+        
+        // Visualize Search Area using Turf.js
+        // Convert NM to Kilometers (1 NM = 1.852 km)
+        const radiusKm = radius * 1.852;
+        const center = [lon, lat];
+        const options = {steps: 64, units: 'kilometers'};
+        const circle = turf.circle(center, radiusKm, options);
+        
+        if (map.getSource('search-area')) {
+            map.getSource('search-area').setData(circle);
+        }
+
         try {
-            const response = await fetch(`/api/geojson?lat=${lat}&lon=${lon}&radius=${radius}`);
+            // Updated to Absolute URL for decoupled testing (Serving HTML separately from API)
+            const response = await fetch(`http://localhost:8000/api/geojson?lat=${lat}&lon=${lon}&radius=${radius}`);
             
             if (!response.ok) {
                 const text = await response.text();
-                throw new Error(`Server Error ${response.status}: ${text}`);
+                throw new Error(`API Error: ${response.status} ${text}`);
             }
 
             const data = await response.json();
             
+            // DEBUG: Print GeoJSON to Console
+            console.log("NOTAM GeoJSON Results:", data);
+
+            // Update Map Source
             if (map.getSource('notams')) {
                 map.getSource('notams').setData(data);
             }

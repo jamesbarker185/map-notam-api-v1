@@ -62,18 +62,20 @@ async def get_notam_geojson(
     
     return feature_collection
 
-# Serve Static Files (HTML)
-# We mount this last so it doesn't override API routes
-static_dir = os.path.join(os.path.dirname(__file__), "static")
-if not os.path.exists(static_dir):
-    os.makedirs(static_dir)
+# Serve Static Files (HTML) - ONLY IN DEV MODE
+# To enable: set ENV=DEV in environment
+if os.getenv("ENV") == "DEV":
+    print("Mounting Static Files (DEV MODE)...")
+    static_dir = os.path.join(os.path.dirname(__file__), "static")
+    if not os.path.exists(static_dir):
+        os.makedirs(static_dir)
 
-app.mount("/static", StaticFiles(directory=static_dir), name="static")
+    app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
-@app.get("/")
-async def read_index():
-    return HTMLResponse(open(os.path.join(static_dir, "map.html")).read())
+    @app.get("/")
+    async def read_index():
+        return HTMLResponse(open(os.path.join(static_dir, "map.html")).read())
 
-@app.get("/map.html")
-async def read_map():
-    return HTMLResponse(open(os.path.join(static_dir, "map.html")).read())
+    @app.get("/map.html")
+    async def read_map():
+        return HTMLResponse(open(os.path.join(static_dir, "map.html")).read())

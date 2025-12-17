@@ -1,38 +1,58 @@
 version: '3.8'
 
 services:
+  # 1. Database
   mongo:
     image: mongo:latest
     container_name: map-notam-mongo
     ports:
-      - "27017:27017"
+      - "27017:27017" # Exposed to host for local dev/testing tools
     volumes:
-      - mongo_data_fresh:/data/db
+      - mongo_data_prod:/data/db
 
-  notam-ingest:
-    build: .
-    container_name: map-notam-ingest
-    restart: unless-stopped
-    depends_on:
-      - mongo
-    environment:
-      - MONGO_URI=mongodb://mongo:27017/
-    env_file:
-      - .env
-
+  # 2. Main API Service (Pure Backend)
   notam-api:
     build: .
     container_name: map-notam-api
-    command: uvicorn app.api:app --host 0.0.0.0 --port 8000 --reload
+    command: uvicorn app.api:app --host 0.0.0.0 --port 8000
     ports:
       - "8000:8000"
     depends_on:
       - mongo
     environment:
       - MONGO_URI=mongodb://mongo:27017/
+      - ENV=PROD # Ensures static files are NOT served
     env_file:
       - .env
 
+  # 3. Live Ingestion Service (Background Listener)
+  notam-listener:
+    build: .
+    container_name: map-notam-listener
+    command: python -m app.live_ingest
+    restart: always
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/
+    env_file:
+      - .env
+
+  # 4. Snapshot / Init Job (One-off)
+  # Run this to look back and seed the DB: 'docker-compose up snapshot'
+  snapshot:
+    build: .
+    container_name: map-notam-snapshot
+    # Chained command: Fetch XML -> Load to DB
+    command: >
+      sh -c "python scripts/fetch_snapshot.py && python scripts/load_data.py"
+    profiles: ["init"] # Only runs when explicitly requested
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/
+    env_file:
+      - .env
 
 volumes:
-  mongo_data_fresh:
+  mongo_data_prod:
