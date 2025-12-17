@@ -60,6 +60,10 @@ class GeoJsonConverter:
         
         if "location" in notam_doc and notam_doc["location"]:
             center = notam_doc["location"]["coordinates"]
+            # Expose Decimal Degrees as separate attributes
+            props["longitude"] = center[0]
+            props["latitude"] = center[1]
+            
             radius = notam_doc.get("radius_nm", 0)
             
             # If significant radius, create Polygon

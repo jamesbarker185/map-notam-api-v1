@@ -15,9 +15,9 @@ class NotamTextParser:
         r"(?:Q\)\s*)?" # Optional Q) prefix
         r"(?P<fir>[A-Z]{4})/"
         r"(?P<code>Q[A-Z]{4})/" # Q-code always starts with Q
-        r"(?P<traffic>[IV]{1,2})/"
-        r"(?P<purpose>[NBOM]{1,3})/"
-        r"(?P<scope>[AEW]{1,2})/"
+        r"(?P<traffic>[IV]*)/" # Relaxed to * (was {1,2})
+        r"(?P<purpose>[NBOM]*)/" # Relaxed to * (was {1,3})
+        r"(?P<scope>[AEW]*)/" # Relaxed to * (was {1,2})
         r"((?P<lower>[0-9]{3})/(?P<upper>[0-9]{3}))?" # Optional Altitude
         r"(?:/(?P<coords>[0-9]{4}[NS][0-9]{5}[EW]))?" # Optional Coords
         r"(?P<radius>[0-9]{3})?" # Optional Radius
