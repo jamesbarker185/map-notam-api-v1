@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>NOTAM Visualization</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!-- Mapbox GL JS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        
+        /* Glassmorphism Panel */
+        .panel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 300px;
+            background: rgba(30, 30, 30, 0.9);
+            color: white;
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        
+        h2 { margin-top: 0; font-size: 1.2rem; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        
+        .control-group { margin-bottom: 15px; }
+        .control-group label { display: block; margin-bottom: 5px; font-size: 0.9rem; font-weight: 500; color: #ccc; }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #555;
+            background: #222;
+            color: white;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background: #007AFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            width: 100%;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        button:hover { background: #0056b3; }
+        
+        .legend {
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 15px;
+        }
+        .legend-item { display: flex; align-items: center; margin-bottom: 8px; font-size: 0.85rem; color: #ddd; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; }
+        
+        /* Popups */
+        .mapboxgl-popup { max-width: 400px; }
+        .mapboxgl-popup-content { border-radius: 8px; padding: 15px; background: #222; color: #fff; }
+        .mapboxgl-popup-tip { border-top-color: #222; }
+        .notam-popup h3 { margin: 0 0 10px 0; font-size: 1rem; color: #007AFF; }
+        .notam-popup p { margin: 5px 0; font-size: 0.9rem; line-height: 1.4; color: #ccc; }
+        .tag { 
+            display: inline-block; padding: 2px 6px; 
+            border-radius: 4px; background: #444; 
+            font-size: 0.75rem; font-weight: 600; 
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div class="panel">
+    <h2>NOTAM Explorer</h2>
+    
+    <div class="control-group">
+        <label>Search Radius (NM)</label>
+        <input type="range" id="radiusInput" min="5" max="100" value="20" oninput="radiusVal.textContent = this.value">
+        <span id="radiusVal">20</span> NM
+    </div>
+    
+    <div class="control-group">
+        <label>Coordinates (Lat, Lon)</label>
+        <div style="display: flex; gap: 10px;">
+            <input type="text" id="latInput" placeholder="Lat" value="42.3656">
+            <input type="text" id="lonInput" placeholder="Lon" value="-71.0096">
+        </div>
+    </div>
+    
+    <button onclick="searchNotams()">Search Area</button>
+    
+    <div class="legend">
+        <div class="legend-item"><div class="dot" style="background: #FA5252;"></div> Runway (Closed/WIP)</div>
+        <div class="legend-item"><div class="dot" style="background: #FD7E14;"></div> Taxiway</div>
+        <div class="legend-item"><div class="dot" style="background: #FCC419;"></div> Obstruction</div>
+        <div class="legend-item"><div class="dot" style="background: #82C91E;"></div> Aerodrome</div>
+        <div class="legend-item"><div class="dot" style="background: #228BE6;"></div> Airspace</div>
+        <div class="legend-item"><div class="dot" style="background: #868E96;"></div> Other</div>
+    </div>
+    
+    <div style="margin-top: 15px; font-size: 0.8rem; color: #888;">
+        Click anywhere to update location.
+    </div>
+</div>
+
+<script>
+    // TO MAKE IT WORK: 
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaW50dWl0aXZlYmFkZ2VyIiwiYSI6ImNtN2FkY2p5ZTAzMm8yanNjY3phdjZudjMifQ.vU_yL1OSajo2l4hKpGzTbA';
+
+    // Initialize Map with Dark Theme
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v11', // Professional dark mode
+        center: [-71.0096, 42.3656], // Default: KBOS
+        zoom: 10
+    });
+
+    // Navigation Controls
+    map.addControl(new mapboxgl.NavigationControl());
+
+    let currentMarker = null;
+
+    // Load initial data when map matches default
+    map.on('load', () => {
+        setupLayers();
+        searchNotams(); // Initial search
+    });
+
+    // Click to search
+    map.on('click', (e) => {
+        document.getElementById('latInput').value = e.lngLat.lat.toFixed(4);
+        document.getElementById('lonInput').value = e.lngLat.lng.toFixed(4);
+        
+        // Update marker
+        if (currentMarker) currentMarker.remove();
+        currentMarker = new mapboxgl.Marker({ color: "#FF0000" })
+            .setLngLat(e.lngLat)
+            .addTo(map);
+            
+        searchNotams();
+    });
+
+    function setupLayers() {
+        // Add source for NOTAMs
+        map.addSource('notams', {
+            type: 'geojson',
+            data: {
+                type: 'FeatureCollection',
+                features: []
+            }
+        });
+
+        // Add Polygon Layer (for areas with radius)
+        map.addLayer({
+            'id': 'notam-areas',
+            'type': 'fill',
+            'source': 'notams',
+            'filter': ['==', '$type', 'Polygon'],
+            'paint': {
+                'fill-color': [
+                    'match',
+                    ['get', 'category'],
+                    'Runway', '#FA5252',
+                    'Taxiway', '#FD7E14',
+                    'Obstruction', '#FCC419',
+                    'Aerodrome', '#82C91E',
+                    'Airspace', '#228BE6',
+                    '#868E96' // Default
+                ],
+                'fill-opacity': 0.3,
+                'fill-outline-color': '#fff'
+            }
+        });
+
+        // Add Point Layer (Center points)
+        map.addLayer({
+            'id': 'notam-points',
+            'type': 'circle',
+            'source': 'notams',
+            'paint': {
+                'circle-radius': 6,
+                'circle-color': [
+                    'match',
+                    ['get', 'category'],
+                    'Runway', '#FA5252',
+                    'Taxiway', '#FD7E14',
+                    'Obstruction', '#FCC419',
+                    'Aerodrome', '#82C91E',
+                    'Airspace', '#228BE6',
+                    '#868E96' // Default
+                ],
+                'circle-stroke-width': 2,
+                'circle-stroke-color': '#fff'
+            }
+        });
+
+        // Interactions (Popup)
+        const popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false,
+            className: 'notam-mapbox-popup'
+        });
+
+        const showPopup = (e) => {
+            map.getCanvas().style.cursor = 'pointer';
+
+            const coordinates = e.features[0].geometry.type === 'Point' 
+                ? e.features[0].geometry.coordinates.slice()
+                : e.lngLat;
+                
+            const props = e.features[0].properties;
+            
+            const description = `
+                <div class="notam-popup">
+                    <h3>${props.number} <span class="tag" style="background:${getColor(props.category)}33; color:${getColor(props.category)}">${props.category}</span></h3>
+                    <p><strong>Code:</strong> ${props.q_code || 'N/A'}</p>
+                    <p><strong>Validity:</strong><br>
+                    Start: ${formatDate(props.start_time)}<br>
+                    End: ${formatDate(props.end_time)}</p>
+                    <hr style="border:0; border-top:1px solid #444; margin:8px 0;">
+                    <p style="font-family:monospace; font-size:0.85rem; white-space:pre-wrap;">${props.text}</p>
+                </div>
+            `;
+
+            popup.setLngLat(coordinates).setHTML(description).addTo(map);
+        };
+
+        const hidePopup = () => {
+            map.getCanvas().style.cursor = '';
+            popup.remove();
+        };
+
+        map.on('mouseenter', 'notam-points', showPopup);
+        map.on('mouseleave', 'notam-points', hidePopup);
+        map.on('mouseenter', 'notam-areas', showPopup);
+        map.on('mouseleave', 'notam-areas', hidePopup);
+    }
+
+    async function searchNotams() {
+        const lat = document.getElementById('latInput').value;
+        const lon = document.getElementById('lonInput').value;
+        const radius = document.getElementById('radiusInput').value;
+        
+        try {
+            const response = await fetch(`/api/geojson?lat=${lat}&lon=${lon}&radius=${radius}`);
+            
+            if (!response.ok) {
+                const text = await response.text();
+                throw new Error(`Server Error ${response.status}: ${text}`);
+            }
+
+            const data = await response.json();
+            
+            if (map.getSource('notams')) {
+                map.getSource('notams').setData(data);
+            }
+            
+            // Zoom to search area roughly
+            map.easeTo({
+                center: [lon, lat],
+                zoom: Math.max(8, 11 - (radius / 20)) // Rough zoom approximation
+            });
+            
+        } catch (err) {
+            console.error("Error fetching NOTAMs:", err);
+            alert(`Error fetching data: ${err.message}`);
+        }
+    }
+    
+    function getColor(category) {
+        switch(category) {
+            case 'Runway': return '#FA5252';
+            case 'Taxiway': return '#FD7E14';
+            case 'Obstruction': return '#FCC419';
+            case 'Aerodrome': return '#82C91E';
+            case 'Airspace': return '#228BE6';
+            default: return '#868E96';
+        }
+    }
+    
+    function formatDate(str) {
+        if (!str) return 'Perm';
+        return new Date(str).toLocaleString();
+    }
+</script>
+
+</body>
+</html>

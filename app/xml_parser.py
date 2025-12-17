@@ -1,6 +1,7 @@
 
 import re
 import defusedxml.ElementTree as ET
+from app.notam_text_parser import NotamTextParser
 
 # Namespaces for AIXM 5.1
 NS = {
@@ -89,6 +90,45 @@ def _extract_notams_from_root(root):
         start_time = notam_node.findtext("event:effectiveStart", default="", namespaces=NS)
         end_time = notam_node.findtext("event:effectiveEnd", default="", namespaces=NS)
 
+        # Try to parse Q-line from translation if available, or text
+        # Usually Q-line is in valid formatted output or sometimes embedded
+        # For this phase, we look for it in the text or try to construct from raw fields if simple
+        
+        # NOTE: The current AIXM dump has Q-lines in the translation field!
+        # Let's check translation field for Q-line
+        translation_node = notam_node.find(".//event:translation/event:NOTAMTranslation/event:formattedText", NS)
+        q_line_data = None
+        
+        if translation_node is not None:
+             # Formatted text usually contains the full ICAO message including Q-line
+             # We might need to dig into the html:div or just get text
+             # The example shows <html:div><pre>...Q)...</pre></html:div>
+             # ElementTree findtext will get all inner text
+             full_text = "".join(translation_node.itertext())
+             q_line_data = NotamTextParser.parse_q_line(full_text)
+             
+        # Fallback: if no Q-line in translation or translation missing, search in main text
+        if not q_line_data and text:
+            q_line_data = NotamTextParser.parse_q_line(text)
+            
+        # Parse E-field (Text) for specifics
+        # Use initial category from Q-line if available, else 'Other'
+        category = q_line_data['category'] if q_line_data else "Other"
+        e_field_data = NotamTextParser.parse_e_field(text, category)
+        
+        # Coordinates: Prefer Q-line if available as it's standard
+        # But for AIXM usage, the 'event:coordinates' usually matches
+        # We stick to existing logic for coords unless missing
+        
+        if q_line_data:
+            # Override/Enrich with Q-line data
+            if not geo_point and q_line_data['raw_coords']:
+                geo_point = NotamTextParser.parse_coordinate_str(q_line_data['raw_coords'])
+            
+            # Use Q-line radius if available/parsed
+            if q_line_data['radius_nm'] > 0:
+                radius_nm = q_line_data['radius_nm']
+                
         # Construct Document
         doc = {
             "notam_id": notam_id,
@@ -98,8 +138,22 @@ def _extract_notams_from_root(root):
             "start_time": start_time,
             "end_time": end_time,
             "radius_nm": radius_nm,
-            "raw_coordinates": raw_coords
+            "raw_coordinates": raw_coords,
+            "category": category,
+            **e_field_data # Spread E-field details
         }
+        
+        if q_line_data:
+            doc.update({
+                "q_code": q_line_data['q_code'],
+                "subject_code": q_line_data['subject_code'],
+                "condition_code": q_line_data['condition_code'],
+                "traffic": q_line_data['traffic'],
+                "purpose": q_line_data['purpose'],
+                "scope": q_line_data['scope'],
+                "lower_fl": q_line_data['lower_fl'],
+                "upper_fl": q_line_data['upper_fl']
+            })
         
         if geo_point:
             doc["location"] = {
