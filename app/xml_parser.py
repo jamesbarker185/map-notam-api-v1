@@ -109,7 +109,26 @@ def _extract_notams_from_root(root):
              
         # Fallback: if no Q-line in translation or translation missing, search in main text
         if not q_line_data and text:
-            q_line_data = NotamTextParser.parse_q_line(text)
+            # Clean text specifically for Q-line regex (newlines to spaces)
+            clean_text = text.replace('\n', ' ').replace('\r', ' ')
+            q_line_data = NotamTextParser.parse_q_line(clean_text)
+
+        # Better Date Parsing
+        # If the XML fields are missing or look invalid, parses from text
+        # Prefer full_text (from translation) as it contains B) and C) lines more reliably
+        date_source_text = full_text if translation_node is not None else (text or "")
+        
+        # DEBUG PRINT
+        print(f"Parsing Dates for {full_number}...")
+        # print(f"Source Text: {date_source_text[:100]}...")
+        
+        parsed_start, parsed_end = NotamTextParser.parse_validity_times(date_source_text)
+        print(f"  -> Extracted: {parsed_start} to {parsed_end}")
+        
+        if not start_time and parsed_start:
+            start_time = parsed_start
+        if not end_time and parsed_end:
+            end_time = parsed_end
             
         # Parse E-field (Text) for specifics
         # Use initial category from Q-line if available, else 'Other'

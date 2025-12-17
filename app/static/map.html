@@ -73,6 +73,72 @@
             border-radius: 4px; background: #444; 
             font-size: 0.75rem; font-weight: 600; 
         }
+
+        /* Side Panel */
+        .side-panel {
+            left: auto;
+            right: 20px;
+            width: 380px;
+            bottom: 20px;
+            top: 20px;
+            overflow-y: auto;
+            display: none; /* Hidden by default */
+            border-left: 1px solid #444;
+        }
+        
+        .side-panel.open { display: block; }
+
+        .notam-list-item {
+            background: #2a2a2a;
+            margin-bottom: 10px;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #888;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .notam-list-item:hover { background: #333; }
+        
+        .notam-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+        .notam-id { font-weight: bold; color: #fff; font-size: 0.95rem; }
+        .notam-date { font-size: 0.75rem; color: #aaa; }
+        
+        .notam-details { 
+            display: none; 
+            margin-top: 10px; 
+            padding-top: 10px; 
+            border-top: 1px solid #444; 
+        }
+        .notam-list-item.expanded .notam-details { display: block; }
+        
+        .detail-row { font-size: 0.85rem; color: #ccc; margin-bottom: 4px; }
+        .detail-label { color: #888; font-weight: 500; min-width: 60px; display: inline-block; }
+        
+        .raw-text {
+            background: #111;
+            padding: 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: #0f0;
+            white-space: pre-wrap;
+            margin-top: 8px;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: #333;
+            color: #fff;
+            border: 1px solid #555;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: auto;
+        }
+        .toggle-btn:hover { background: #444; }
     </style>
 </head>
 <body>
@@ -109,6 +175,15 @@
     
     <div style="margin-top: 15px; font-size: 0.8rem; color: #888;">
         Click anywhere to update location.
+    </div>
+</div>
+
+<button class="toggle-btn" onclick="toggleSidePanel()">Toggle List View</button>
+
+<div class="panel side-panel" id="sidePanel">
+    <h2>NOTAM List <span id="notamCount" style="font-size:0.8rem; color:#888; font-weight:normal; margin-left:10px;">(0)</span></h2>
+    <div id="notamListContainer">
+        <div style="text-align:center; padding:20px; color:#666;">Perform a search to see NOTAMs here.</div>
     </div>
 </div>
 
@@ -215,7 +290,7 @@
 
             const coordinates = e.features[0].geometry.type === 'Point' 
                 ? e.features[0].geometry.coordinates.slice()
-                : e.lngLat;
+                : e.lngLat; // Use click location for polygons to ensure popup is visible
                 
             const props = e.features[0].properties;
             
@@ -264,16 +339,93 @@
                 map.getSource('notams').setData(data);
             }
             
+            // Render Side Panel
+            renderNotamList(data.features);
+            
             // Zoom to search area roughly
             map.easeTo({
                 center: [lon, lat],
                 zoom: Math.max(8, 11 - (radius / 20)) // Rough zoom approximation
             });
             
+            // Auto open panel on search
+            const panel = document.getElementById('sidePanel');
+            if (!panel.classList.contains('open') && data.features.length > 0) {
+                panel.classList.add('open');
+            }
+            
         } catch (err) {
             console.error("Error fetching NOTAMs:", err);
             alert(`Error fetching data: ${err.message}`);
         }
+    }
+    
+    function toggleSidePanel() {
+        document.getElementById('sidePanel').classList.toggle('open');
+    }
+    
+    function renderNotamList(features) {
+        const container = document.getElementById('notamListContainer');
+        document.getElementById('notamCount').textContent = `(${features.length})`;
+        container.innerHTML = '';
+        
+        if (features.length === 0) {
+            container.innerHTML = '<div style="text-align:center; padding:20px; color:#666;">No NOTAMs found in this area.</div>';
+            return;
+        }
+        
+        features.forEach(f => {
+            const p = f.properties;
+            const color = getColor(p.category);
+            
+            const div = document.createElement('div');
+            div.className = 'notam-list-item';
+            div.style.borderLeftColor = color;
+            
+            div.innerHTML = `
+                <div class="notam-header">
+                    <span class="notam-id">${p.number} <span style="font-weight:normal; font-size:0.8em; color:${color}; opacity:0.8;">${p.category}</span></span>
+                    <span class="notam-date">${formatDate(p.start_time).split(',')[0]}</span>
+                </div>
+                <div style="font-size:0.8rem; color:#ccc; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                    ${p.condition || 'Unknown Condition'}
+                </div>
+                
+                <div class="notam-details">
+                    <div class="detail-row"><span class="detail-label">Q-Code:</span> ${p.q_code || 'N/A'}</div>
+                    <div class="detail-row"><span class="detail-label">Start:</span> ${formatDate(p.start_time)}</div>
+                    <div class="detail-row"><span class="detail-label">End:</span> ${formatDate(p.end_time)}</div>
+                    <div class="detail-row"><span class="detail-label">Min Alt:</span> ${p.lower_fl || '000'} FL</div>
+                    <div class="detail-row"><span class="detail-label">Max Alt:</span> ${p.upper_fl || '999'} FL</div>
+                    <div class="detail-row"><span class="detail-label">Radius:</span> ${p.radius_nm} NM</div>
+                    
+                    <div class="raw-text">${p.text}</div>
+                    
+                    <button style="margin-top:10px; font-size:0.8rem; padding:5px;" onclick="zoomToNotam([${f.geometry.coordinates[0][0]}, ${f.geometry.coordinates[0][1]}])">Map View</button>
+                </div>
+            `;
+            
+            // Toggle Expand
+            div.addEventListener('click', (e) => {
+                // Don't trigger if button clicked
+                if (e.target.tagName === 'BUTTON') return;
+                div.classList.toggle('expanded');
+            });
+            
+            container.appendChild(div);
+        });
+    }
+    
+    function zoomToNotam(center) {
+        // Handle Point vs Polygon center
+        // Simplified: assuming Polygon's first point for now or center if passed
+        // The geojson converter outputs Polygons or Points. 
+        // We'll pass simpler logic later if needed, but for now specific coords passed in render
+         map.flyTo({
+            center: center,
+            zoom: 12,
+            speed: 1.5
+        });
     }
     
     function getColor(category) {

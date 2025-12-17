@@ -1,34 +1,703 @@
 <FNS_Snapshot>
-<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765858766196264"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765858766196264"><gml:identifier codeSpace="urn:uuid:">e0895d8b-baa8-46e6-85e8-b923f14534ab</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765858766196264"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765858766196264"><gml:beginPosition>2025-12-16T04:18:00.000Z</gml:beginPosition><gml:endPosition>2025-12-16T05:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765858766196264"><event:series>S</event:series><event:number>4810</event:number><event:year>2025</event:year><event:type>R</event:type><event:issued>2025-12-16T04:18:00.000Z</event:issued><event:affectedFIR>CZQM</event:affectedFIR><event:selectionCode>QFAXX</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4610N06003W</event:coordinates><event:radius>005</event:radius><event:location>CYQY</event:location><event:effectiveStart>202512160418</event:effectiveStart><event:effectiveEnd>202512160500</event:effectiveEnd><event:text>RSC 18 6/6/6 10 PCT ICE, 10 PCT ICE, 10 PCT ICE. 120FT WIDTH. 
-REMAINING WIDTH COMPACTED SNOW. VALID DEC 16 0412 - DEC 16 1212.
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943366464341"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943366464341"><gml:identifier codeSpace="urn:uuid:">0983742e-74b4-469c-b70a-88db3fadb383</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943366464341"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943366464341"><gml:beginPosition>2025-12-17T03:48:00.000Z</gml:beginPosition><gml:endPosition>2025-12-20T03:48:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943366464341"><event:series>A</event:series><event:number>3913</event:number><event:year>2025</event:year><event:type>C</event:type><event:issued>2025-12-17T03:48:00.000Z</event:issued><event:affectedFIR>KZBW</event:affectedFIR><event:selectionCode>QMNXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4256N07126W</event:coordinates><event:radius>005</event:radius><event:location>MHT</event:location><event:effectiveStart>202512170348</event:effectiveStart><event:effectiveEnd>202512200348</event:effectiveEnd><event:text>A3913/25 NOTAMC A3909/25 
+Q) KZBW/QMNXX////000/999/4256N07126W005 
+A) KMHT
+B) 2512170348
+E)  MHT APRON ALL FICON PATCHY ICE AND PATCHY COMPACTED SN BA MEDIUM
+CANCELED</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943366464341"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3913/25 NOTAMC A3909/25 
+Q) KZBW/QMNXX////000/999/4256N07126W005 
+A) KMHT
+B) 2512170348
+E)  MHT APRON ALL FICON PATCHY ICE AND PATCHY COMPACTED SN BA MEDIUM
+CANCELED
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943366464341"><fnse:classification>INTL</fnse:classification><fnse:accountId>KMHT</fnse:accountId><fnse:airportname>MANCHESTER BOSTON RGNL</fnse:airportname><fnse:originID>KMHT</fnse:originID><fnse:lastUpdated>2025-12-17T03:48:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KMHT</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943366465492"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943366465492"><gml:identifier codeSpace="urn:uuid:">a4fbd1b1-7bdd-41ad-8c01-bbd242d33af8</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943366465492"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943366465492"><gml:beginPosition>2025-12-21T23:00:00.000Z</gml:beginPosition><gml:endPosition>2026-01-21T08:29:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943366465492"><event:series>K</event:series><event:number>4037</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:48:00.000Z</event:issued><event:affectedFIR>RJJJ</event:affectedFIR><event:selectionCode>QWPLW</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>M</event:purpose><event:scope>AW</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>027</event:maximumFL><event:coordinates>3257N13000E</event:coordinates><event:radius>002</event:radius><event:location>RJFU</event:location><event:effectiveStart>202512212300</event:effectiveStart><event:effectiveEnd>202601210829</event:effectiveEnd><event:schedule>2025 DEC 21-30 2300/0815 31-2026 JAN 09 2300/0820 10-20 2300/0829</event:schedule><event:text>PARA-GLD AND HANG-GLD FLT:
+1.FLT AREA : BOUNDED BY FLW POINTS
+             325803N1295834E 325705N1295828E 325627N1295842E
+             325623N1295910E 325617N1295933E 325643N1300111E
+             325735N1300049E 325832N1300005E
+             (APRX QTE/066DEG 3.6NM FM RJFU ARP)
+             (OMURA-SHI IN NAGASAKI)
+2.NR       : 15
+3.WX COND  : VMC ONLY</event:text><event:lowerLimit>SFC</event:lowerLimit><event:upperLimit>2625FT AMSL</event:upperLimit><event:translation><event:NOTAMTranslation gml:id="NT02_1765943366465492"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+K4037/25 NOTAMN
+Q) RJJJ/QWPLW/IV/M/AW/000/027/3257N13000E002
+A) RJFU B) 2512212300 C) 2601210829
+D) 2025 DEC 21-30 2300/0815 31-2026 JAN 09
+2300/0820 10-20 2300/0829
+E) PARA-GLD AND HANG-GLD FLT:
+1.FLT AREA : BOUNDED BY FLW POINTS
+             325803N1295834E 325705N1295828E 325627N1295842E
+             325623N1295910E 325617N1295933E 325643N1300111E
+             325735N1300049E 325832N1300005E
+             (APRX QTE/066DEG 3.6NM FM RJFU ARP)
+             (OMURA-SHI IN NAGASAKI)
+2.NR       : 15
+3.WX COND  : VMC ONLY
+F) SFC G) 2625FT AMSL
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943366465492"><fnse:classification>INTL</fnse:classification><fnse:accountId>RJAAYNYX</fnse:accountId><fnse:airportname>NAGASAKI</fnse:airportname><fnse:originID>RJAAYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:48:00.000Z</fnse:lastUpdated><fnse:icaoLocation>RJFU</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943389109444"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943389109444"><gml:identifier codeSpace="urn:uuid:">ba50bf4d-faf7-4f36-9691-ab7da5faa132</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943389109444"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943389109444"><gml:beginPosition>2025-12-17T03:48:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T04:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943389109444"><event:series>A</event:series><event:number>6729</event:number><event:year>2025</event:year><event:type>R</event:type><event:issued>2025-12-17T03:48:00.000Z</event:issued><event:affectedFIR>CZWG</event:affectedFIR><event:selectionCode>QFAXX</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>5313N10540W</event:coordinates><event:radius>005</event:radius><event:location>CYPA</event:location><event:effectiveStart>202512170348</event:effectiveStart><event:effectiveEnd>202512170400</event:effectiveEnd><event:text>RSC 08/26 10 PCT COMPACTED SNOW AND 20 PCT 1/8IN DRY SNOW. 130FT 
+WIDTH. 6IN WINDROWS 5FT ALONG INSIDE SOUTH AND 5FT ALONG INSIDE 
+NORTH RWY EDGE. REMAINING WIDTH 3IN DRY SNOW. CHEMICAL RESIDUE 
+PRESENT. PATCHY CONTAMINANT. VALID DEC 17 0345 - DEC 17 1145.
 
-RSC 36 6/6/6 10 PCT ICE, 10 PCT ICE, 10 PCT ICE. 120FT WIDTH. 
-REMAINING WIDTH COMPACTED SNOW. VALID DEC 16 0412 - DEC 16 1212.
+ADDN NON-GRF/TALPA INFO:
+CRFI 08/26 -14C .38 OBS AT 2512170345.
+
+RMK: TWY ALPHA, FOXTROT, 202512170346, DRY SNOW ON TOP OF 
+COMPACTED SNOW, 1/2IN. PATCHY CONTAMINANT. WINDROWS PRESENT. TWY 
+BRAVO, 202512170348, DRY SNOW ON TOP OF COMPACTED SNOW, 1/8IN. 
+PATCHY CONTAMINANT. TWY CHARLIE, DELTA, 202512170347, DRY SNOW, 
+1IN. PATCHY CONTAMINANT. WINDROWS PRESENT.
+RMK: APN APRON I, 202512170336, DRY SNOW ON TOP OF COMPACTED 
+SNOW, 1/8IN. APN APRON II, 202512170347, DRY SNOW ON TOP OF 
+COMPACTED SNOW, 1/2IN. PATCHY CONTAMINANT. APN APRON III, 
+202512170347, DRY SNOW, 1/2IN.
+RMK: NEXT OBS AT DEC 17 1100.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943389109444"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A6729/25 NOTAMR A6704/25
+Q) CZWG/QFAXX/IV/NBO/A/000/999/5313N10540W005
+A) CYPA B) 2512170348 C) 2512170400
+E) RSC 08/26 10 PCT COMPACTED SNOW AND 20 PCT 1/8IN DRY SNOW. 130FT 
+WIDTH. 6IN WINDROWS 5FT ALONG INSIDE SOUTH AND 5FT ALONG INSIDE 
+NORTH RWY EDGE. REMAINING WIDTH 3IN DRY SNOW. CHEMICAL RESIDUE 
+PRESENT. PATCHY CONTAMINANT. VALID DEC 17 0345 - DEC 17 1145.
+
+ADDN NON-GRF/TALPA INFO:
+CRFI 08/26 -14C .38 OBS AT 2512170345.
+
+RMK: TWY ALPHA, FOXTROT, 202512170346, DRY SNOW ON TOP OF 
+COMPACTED SNOW, 1/2IN. PATCHY CONTAMINANT. WINDROWS PRESENT. TWY 
+BRAVO, 202512170348, DRY SNOW ON TOP OF COMPACTED SNOW, 1/8IN. 
+PATCHY CONTAMINANT. TWY CHARLIE, DELTA, 202512170347, DRY SNOW, 
+1IN. PATCHY CONTAMINANT. WINDROWS PRESENT.
+RMK: APN APRON I, 202512170336, DRY SNOW ON TOP OF COMPACTED 
+SNOW, 1/8IN. APN APRON II, 202512170347, DRY SNOW ON TOP OF 
+COMPACTED SNOW, 1/2IN. PATCHY CONTAMINANT. APN APRON III, 
+202512170347, DRY SNOW, 1/2IN.
+RMK: NEXT OBS AT DEC 17 1100.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943389109444"><fnse:classification>INTL</fnse:classification><fnse:accountId>CYHQYNYX</fnse:accountId><fnse:airportname>PRINCE ALBERT GLASS FIELD</fnse:airportname><fnse:originID>CYHQYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:49:00.000Z</fnse:lastUpdated><fnse:icaoLocation>CYPA</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943433058945"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943433058945"><gml:identifier codeSpace="urn:uuid:">0b11fce1-6249-4efd-ae4f-8737ec0a13b5</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943433058945"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943433058945"><gml:beginPosition>2025-12-17T03:49:00.000Z</gml:beginPosition><gml:endPosition>2025-12-20T03:49:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943433058945"><event:series>H</event:series><event:number>4882</event:number><event:year>2025</event:year><event:type>C</event:type><event:issued>2025-12-17T03:49:00.000Z</event:issued><event:affectedFIR>RJJJ</event:affectedFIR><event:selectionCode>QOBCC</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>M</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>002</event:maximumFL><event:coordinates>2612N12738E</event:coordinates><event:radius>005</event:radius><event:location>ROAH</event:location><event:effectiveStart>202512170349</event:effectiveStart><event:effectiveEnd>202512200349</event:effectiveEnd><event:text>H4882/25 NOTAMC H4873/25
+Q) RJJJ/QOBCC/IV/M/A/000/002/2612N12738E005
+A) ROAH B) 2512170349
+E) REF AIP ROAH AD 2.23
+OBST(VESSEL)
+CMPL</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943433058945"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+H4882/25 NOTAMC H4873/25
+Q) RJJJ/QOBCC/IV/M/A/000/002/2612N12738E005
+A) ROAH B) 2512170349
+E) REF AIP ROAH AD 2.23
+OBST(VESSEL)
+CMPL
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943433058945"><fnse:classification>INTL</fnse:classification><fnse:accountId>RJAAYNYX</fnse:accountId><fnse:airportname>NAHA</fnse:airportname><fnse:originID>RJAAYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:49:00.000Z</fnse:lastUpdated><fnse:icaoLocation>ROAH</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943433173053"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943433173053"><gml:identifier codeSpace="urn:uuid:">15e3b1ed-9204-47af-8a8b-3463b67481c5</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943433173053"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943433173053"><gml:beginPosition>2025-12-17T03:49:00.000Z</gml:beginPosition><gml:endPosition indeterminatePosition="unknown">2026-03-17T04:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943433173053"><event:series>C</event:series><event:number>1380</event:number><event:year>2025</event:year><event:type>R</event:type><event:issued>2025-12-17T03:49:00.000Z</event:issued><event:affectedFIR>RPHI</event:affectedFIR><event:selectionCode>QMRHW</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>BO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>1011N12447E</event:coordinates><event:radius>005</event:radius><event:location>RPSM</event:location><event:effectiveStart>202512170349</event:effectiveStart><event:effectiveEnd>202603170400EST</event:effectiveEnd><event:text>RWY 16/34 WIP (RWY EXTENSION AND EXPANSION).
+
+RMK: EXER CTN DRG LDG/TKOF RWY 16/34.
+     GIVE AMPLE TIME FOR MEN AND EQPT TO CLR THE RWY.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943433173053"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+C1380/25 NOTAMR C0953/25
+Q) RPHI/QMRHW/IV/BO /A /000/999/1011N12447E005
+A) RPSM B) 2512170349 C) 2603170400 EST
+E) RWY 16/34 WIP (RWY EXTENSION AND EXPANSION).
+
+RMK: EXER CTN DRG LDG/TKOF RWY 16/34.
+     GIVE AMPLE TIME FOR MEN AND EQPT TO CLR THE RWY.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943433173053"><fnse:classification>INTL</fnse:classification><fnse:accountId>RPLLYNYX</fnse:accountId><fnse:airportname>MAASIN</fnse:airportname><fnse:originID>EUECYIYN</fnse:originID><fnse:lastUpdated>2025-12-17T03:49:00.000Z</fnse:lastUpdated><fnse:icaoLocation>RPSM</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943433055324"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943433055324"><gml:identifier codeSpace="urn:uuid:">3d0982e1-e3f2-4256-a624-9066c89a4c2e</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943433055324"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943433055324"><gml:beginPosition>2025-12-17T03:49:00.000Z</gml:beginPosition><gml:endPosition>2025-12-20T03:49:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943433055324"><event:series>A</event:series><event:number>3566</event:number><event:year>2025</event:year><event:type>C</event:type><event:issued>2025-12-17T03:49:00.000Z</event:issued><event:affectedFIR>PAZA</event:affectedFIR><event:selectionCode>QMNXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:location>DLG</event:location><event:effectiveStart>202512170349</event:effectiveStart><event:effectiveEnd>202512200349</event:effectiveEnd><event:text>A3566/25 NOTAMC A3565/25 
+Q) PAZA/QMNXX////000/999/ 
+A) PADL
+B) 2512170349
+E)  DLG APRON WEST FICON PATCHY COMPACTED SN OBS AT 2512161700.
+CANCELED</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943433055324"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3566/25 NOTAMC A3565/25 
+Q) PAZA/QMNXX////000/999/ 
+A) PADL
+B) 2512170349
+E)  DLG APRON WEST FICON PATCHY COMPACTED SN OBS AT 2512161700.
+CANCELED
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943433055324"><fnse:classification>INTL</fnse:classification><fnse:accountId>PADL</fnse:accountId><fnse:airportname>DILLINGHAM</fnse:airportname><fnse:originID>PADL</fnse:originID><fnse:lastUpdated>2025-12-17T03:49:00.000Z</fnse:lastUpdated><fnse:icaoLocation>PADL</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943475205642"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943475205642"><gml:identifier codeSpace="urn:uuid:">1d8b1fe1-d406-4c2c-a602-dc9b335352f3</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943475205642"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943475205642"><gml:beginPosition>2025-12-17T03:49:00.000Z</gml:beginPosition><gml:endPosition>2025-12-20T03:49:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943475205642"><event:series>G</event:series><event:number>4681</event:number><event:year>2025</event:year><event:type>C</event:type><event:issued>2025-12-17T03:49:00.000Z</event:issued><event:affectedFIR>CZWG</event:affectedFIR><event:selectionCode>QACCC</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>AE</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>030</event:maximumFL><event:coordinates>4955N09714W</event:coordinates><event:radius>007</event:radius><event:location>CYWG</event:location><event:effectiveStart>202512170349</event:effectiveStart><event:effectiveEnd>202512200349</event:effectiveEnd><event:text>G4681/25 NOTAMC G4680/25
+Q) CZWG/QACCC/IV/NBO/AE/000/030/4955N09714W007
+A) CYWG B) 2512170349
+E) SYSTEM CAPACITY RESTORED</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943475205642"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+G4681/25 NOTAMC G4680/25
+Q) CZWG/QACCC/IV/NBO/AE/000/030/4955N09714W007
+A) CYWG B) 2512170349
+E) SYSTEM CAPACITY RESTORED
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943475205642"><fnse:classification>INTL</fnse:classification><fnse:accountId>CYHQYNYX</fnse:accountId><fnse:airportname>JAMES ARMSTRONG RICHARDSON INTL</fnse:airportname><fnse:originID>CYHQYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:50:00.000Z</fnse:lastUpdated><fnse:icaoLocation>CYWG</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943475201793"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943475201793"><gml:identifier codeSpace="urn:uuid:">f0f8e8e3-5b6b-4a3f-9236-b3d52694b393</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943475201793"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943475201793"><gml:beginPosition>2025-12-17T03:50:00.000Z</gml:beginPosition><gml:endPosition>2025-12-20T03:50:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943475201793"><event:series>A</event:series><event:number>3567</event:number><event:year>2025</event:year><event:type>C</event:type><event:issued>2025-12-17T03:50:00.000Z</event:issued><event:affectedFIR>PAZA</event:affectedFIR><event:selectionCode>QMXXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:location>DLG</event:location><event:effectiveStart>202512170350</event:effectiveStart><event:effectiveEnd>202512200350</event:effectiveEnd><event:text>A3567/25 NOTAMC A3564/25 
+Q) PAZA/QMXXX////000/999/ 
+A) PADL
+B) 2512170349
+E)  DLG TWY C FICON PATCHY COMPACTED SN OBS AT 2512161700.
+CANCELED</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943475201793"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3567/25 NOTAMC A3564/25 
+Q) PAZA/QMXXX////000/999/ 
+A) PADL
+B) 2512170349
+E)  DLG TWY C FICON PATCHY COMPACTED SN OBS AT 2512161700.
+CANCELED
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943475201793"><fnse:classification>INTL</fnse:classification><fnse:accountId>PADL</fnse:accountId><fnse:airportname>DILLINGHAM</fnse:airportname><fnse:originID>PADL</fnse:originID><fnse:lastUpdated>2025-12-17T03:50:00.000Z</fnse:lastUpdated><fnse:icaoLocation>PADL</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943590265297"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943590265297"><gml:identifier codeSpace="urn:uuid:">190f5cfd-3f6c-4d13-9f89-def646ef7fc1</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943590265297"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943590265297"><gml:beginPosition>2025-12-17T03:48:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T10:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943590265297"><event:series>A</event:series><event:number>1888</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:affectedFIR>KZBW</event:affectedFIR><event:selectionCode>QMRLC</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4222N07100W</event:coordinates><event:radius>005</event:radius><event:location>BOS</event:location><event:effectiveStart>202512170348</event:effectiveStart><event:effectiveEnd>202512171000</event:effectiveEnd><event:text>BOS RWY 04L/22R CLSD EXC TAX 30MIN PPR 131.1</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943590265297"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A1888/25 NOTAMN
+Q) KZBW/QMRLC/IV/NBO/A/000/999/4222N07100W005
+A) KBOS
+B) 2512170348
+C) 2512171000
+E) BOS RWY 04L/22R CLSD EXC TAX 30MIN PPR 131.1
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943590265297"><fnse:classification>INTL</fnse:classification><fnse:accountId>KBOS</fnse:accountId><fnse:xoveraccountID>BOS</fnse:xoveraccountID><fnse:xovernotamID>12/356</fnse:xovernotamID><fnse:airportname>GENERAL EDWARD LAWRENCE LOGAN INTL</fnse:airportname><fnse:originID>KBOS</fnse:originID><fnse:lastUpdated>2025-12-17T03:52:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KBOS</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943590309916"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943590309916"><gml:identifier codeSpace="urn:uuid:">c18f5ce5-8fea-4d51-8bbb-df233ceabb91</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943590309916"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943590309916"><gml:beginPosition>2025-12-17T04:00:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T11:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943590309916"><event:series>A</event:series><event:number>9466</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:affectedFIR>KZNY</event:affectedFIR><event:selectionCode>QMXLC</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>BO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4038N07347W</event:coordinates><event:radius>005</event:radius><event:location>JFK</event:location><event:effectiveStart>202512170400</event:effectiveStart><event:effectiveEnd>202512171100</event:effectiveEnd><event:text>JFK TWY B BTN TWY TB AND TWY WW CLSD</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943590309916"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A9466/25 NOTAMN
+Q) KZNY/QMXLC/IV/BO/A/000/999/4038N07347W005
+A) KJFK
+B) 2512170400
+C) 2512171100
+E) JFK TWY B BTN TWY TB AND TWY WW CLSD
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943590309916"><fnse:classification>INTL</fnse:classification><fnse:accountId>KJFK</fnse:accountId><fnse:xoveraccountID>JFK</fnse:xoveraccountID><fnse:xovernotamID>12/407</fnse:xovernotamID><fnse:airportname>JOHN F KENNEDY INTL</fnse:airportname><fnse:originID>KJFK</fnse:originID><fnse:lastUpdated>2025-12-17T03:52:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KJFK</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943592154723"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943592154723"><gml:identifier codeSpace="urn:uuid:">cc7390f1-a0d6-45f4-82c1-adac0021d2ed</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943592154723"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943592154723"><gml:beginPosition>2025-12-17T03:52:00.000Z</gml:beginPosition><gml:endPosition>2025-12-20T03:52:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943592154723"><event:series>J</event:series><event:number>8131</event:number><event:year>2025</event:year><event:type>C</event:type><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:affectedFIR>UNNT</event:affectedFIR><event:selectionCode>QRTCC</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>BO</event:purpose><event:scope>W</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>5502N08254E</event:coordinates><event:radius>001</event:radius><event:location>UNNT</event:location><event:effectiveStart>202512170352</event:effectiveStart><event:effectiveEnd>202512200352</event:effectiveEnd><event:text>J8131/25 NOTAMC J7869/25
+Q) UNNT/QRTCC/IV/BO/W/000/999/5502N08254E001
+A) UNNT B) 2512170343
+E) CNL.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943592154723"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+J8131/25 NOTAMC J7869/25
+Q) UNNT/QRTCC/IV/BO/W/000/999/5502N08254E001
+A) UNNT B) 2512170343
+E) CNL.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943592154723"><fnse:classification>INTL</fnse:classification><fnse:accountId>UUUUYNYX</fnse:accountId><fnse:airportname>TOLMACHEVO</fnse:airportname><fnse:originID>UUUUYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:52:00.000Z</fnse:lastUpdated><fnse:icaoLocation>UNNT</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943590266770"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943590266770"><gml:identifier codeSpace="urn:uuid:">6b0b4432-3088-4f85-b562-074c43ec2212</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943590266770"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943590266770"><gml:beginPosition>2025-12-17T03:52:00.000Z</gml:beginPosition><gml:endPosition>2025-12-20T03:52:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943590266770"><event:series>J</event:series><event:number>8130</event:number><event:year>2025</event:year><event:type>C</event:type><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:affectedFIR>UNNT</event:affectedFIR><event:selectionCode>QRTCC</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>BO</event:purpose><event:scope>W</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>5504N08255E</event:coordinates><event:radius>001</event:radius><event:location>UNNT</event:location><event:effectiveStart>202512170352</event:effectiveStart><event:effectiveEnd>202512200352</event:effectiveEnd><event:text>J8130/25 NOTAMC J7871/25
+Q) UNNT/QRTCC/IV/BO/W/000/999/5504N08255E001
+A) UNNT B) 2512170342
+E) CNL.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943590266770"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+J8130/25 NOTAMC J7871/25
+Q) UNNT/QRTCC/IV/BO/W/000/999/5504N08255E001
+A) UNNT B) 2512170342
+E) CNL.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943590266770"><fnse:classification>INTL</fnse:classification><fnse:accountId>UUUUYNYX</fnse:accountId><fnse:airportname>TOLMACHEVO</fnse:airportname><fnse:originID>UUUUYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:52:00.000Z</fnse:lastUpdated><fnse:icaoLocation>UNNT</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943590265297"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943590265297"><gml:identifier codeSpace="urn:uuid:">4e3c04af-07e6-4180-baed-c3ca8563bc72</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943590265297"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943590265297"><gml:beginPosition>2025-12-17T03:48:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T10:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943590265297"><event:series>A</event:series><event:number>1888</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:affectedFIR>KZBW</event:affectedFIR><event:selectionCode>QMRLC</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4222N07100W</event:coordinates><event:radius>005</event:radius><event:location>BOS</event:location><event:effectiveStart>202512170348</event:effectiveStart><event:effectiveEnd>202512171000</event:effectiveEnd><event:text>BOS RWY 04L/22R CLSD EXC TAX 30MIN PPR 131.1</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943590265297"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A1888/25 NOTAMN
+Q) KZBW/QMRLC/IV/NBO/A/000/999/4222N07100W005
+A) KBOS
+B) 2512170348
+C) 2512171000
+E) BOS RWY 04L/22R CLSD EXC TAX 30MIN PPR 131.1
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943590265297"><fnse:classification>INTL</fnse:classification><fnse:accountId>KBOS</fnse:accountId><fnse:xoveraccountID>BOS</fnse:xoveraccountID><fnse:xovernotamID>12/356</fnse:xovernotamID><fnse:airportname>GENERAL EDWARD LAWRENCE LOGAN INTL</fnse:airportname><fnse:originID>KBOS</fnse:originID><fnse:lastUpdated>2025-12-17T03:53:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KBOS</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943630922080"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943630922080"><gml:identifier codeSpace="urn:uuid:">f756b1c1-d77c-4fde-ac9a-85b7e51aa94d</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943630922080"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943630922080"><gml:beginPosition>2025-12-17T03:52:00.000Z</gml:beginPosition><gml:endPosition>2025-12-20T03:52:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943630922080"><event:series>A</event:series><event:number>5532</event:number><event:year>2025</event:year><event:type>C</event:type><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:affectedFIR>WMFC</event:affectedFIR><event:selectionCode>QCBAK</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>BO</event:purpose><event:scope>E</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:location>WMFC</event:location><event:effectiveStart>202512170352</event:effectiveStart><event:effectiveEnd>202512200352</event:effectiveEnd><event:text>A5532/25 NOTAMC A5396/25
+Q) WMFC/QCBAK/IV/BO /E /000/999/
+A) WMFC B) 2512170328
+E) NOTAM CNL DUE TO RESUME NORMAL OPS</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943630922080"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A5532/25 NOTAMC A5396/25
+Q) WMFC/QCBAK/IV/BO /E /000/999/
+A) WMFC B) 2512170328
+E) NOTAM CNL DUE TO RESUME NORMAL OPS
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943630922080"><fnse:classification>INTL</fnse:classification><fnse:accountId>WMKKYNYX</fnse:accountId><fnse:airportname>KUALA LUMPUR ACC/FIC</fnse:airportname><fnse:originID>WMKKYNYM</fnse:originID><fnse:lastUpdated>2025-12-17T03:53:00.000Z</fnse:lastUpdated><fnse:icaoLocation>WMFC</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943630925244"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943630925244"><gml:identifier codeSpace="urn:uuid:">e94e3541-c835-44d2-b90f-2477e18f0078</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943630925244"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943630925244"><gml:beginPosition>2025-12-17T03:30:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:30:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943630925244"><event:series>SWUU</event:series><event:number>3659</event:number><event:year>2025</event:year><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:location>ULLI</event:location><event:effectiveStart>202512170330</event:effectiveStart><event:effectiveEnd>202512180330</event:effectiveEnd><event:text>C)10L F)2/2/2 G)XX/XX/XX H)5/5/5 ATT2 N)2
+C)10R F)2/2/2 G)XX/XX/XX H)5/5/5 ATT2 N)2
+R)2 S)12171000)</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943630925244"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+SWUU3659 ULLI 12170330
+(SNOWTAM 3659
+A)ULLI B)12170330
+C)10L F)2/2/2 G)XX/XX/XX H)5/5/5 ATT2 N)2
+C)10R F)2/2/2 G)XX/XX/XX H)5/5/5 ATT2 N)2
+R)2 S)12171000)
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943630925244"><fnse:classification>INTL</fnse:classification><fnse:accountId>SNOWTAM</fnse:accountId><fnse:airportname>PULKOVO</fnse:airportname><fnse:originID>UUUUYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:53:00.000Z</fnse:lastUpdated><fnse:icaoLocation>ULLI</fnse:icaoLocation><fnse:snowtamCountryCode>UU</fnse:snowtamCountryCode></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943634036377"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943634036377"><gml:identifier codeSpace="urn:uuid:">7fb49b82-0125-4bd3-837b-518619060a06</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943634036377"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943634036377"><gml:beginPosition>2025-12-17T03:48:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T10:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943634036377"><event:series>A</event:series><event:number>1889</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:affectedFIR>KZBW</event:affectedFIR><event:selectionCode>QMRLC</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4222N07100W</event:coordinates><event:radius>005</event:radius><event:location>BOS</event:location><event:effectiveStart>202512170348</event:effectiveStart><event:effectiveEnd>202512171000</event:effectiveEnd><event:text>BOS RWY 09/27 CLSD EXC TAX 30MIN PPR 131.1</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943634036377"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A1889/25 NOTAMN
+Q) KZBW/QMRLC/IV/NBO/A/000/999/4222N07100W005
+A) KBOS
+B) 2512170348
+C) 2512171000
+E) BOS RWY 09/27 CLSD EXC TAX 30MIN PPR 131.1
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943634036377"><fnse:classification>INTL</fnse:classification><fnse:accountId>KBOS</fnse:accountId><fnse:xoveraccountID>BOS</fnse:xoveraccountID><fnse:xovernotamID>12/357</fnse:xovernotamID><fnse:airportname>GENERAL EDWARD LAWRENCE LOGAN INTL</fnse:airportname><fnse:originID>KBOS</fnse:originID><fnse:lastUpdated>2025-12-17T03:53:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KBOS</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943590309916"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943590309916"><gml:identifier codeSpace="urn:uuid:">c551c532-79a4-4e19-a935-c70d73b65d28</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943590309916"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943590309916"><gml:beginPosition>2025-12-17T04:00:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T11:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943590309916"><event:series>A</event:series><event:number>9466</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:affectedFIR>KZNY</event:affectedFIR><event:selectionCode>QMXLC</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>BO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4038N07347W</event:coordinates><event:radius>005</event:radius><event:location>JFK</event:location><event:effectiveStart>202512170400</event:effectiveStart><event:effectiveEnd>202512171100</event:effectiveEnd><event:text>JFK TWY B BTN TWY TB AND TWY WW CLSD</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943590309916"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A9466/25 NOTAMN
+Q) KZNY/QMXLC/IV/BO/A/000/999/4038N07347W005
+A) KJFK
+B) 2512170400
+C) 2512171100
+E) JFK TWY B BTN TWY TB AND TWY WW CLSD
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943590309916"><fnse:classification>INTL</fnse:classification><fnse:accountId>KJFK</fnse:accountId><fnse:xoveraccountID>JFK</fnse:xoveraccountID><fnse:xovernotamID>12/407</fnse:xovernotamID><fnse:airportname>JOHN F KENNEDY INTL</fnse:airportname><fnse:originID>KJFK</fnse:originID><fnse:lastUpdated>2025-12-17T03:53:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KJFK</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943633432332"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943633432332"><gml:identifier codeSpace="urn:uuid:">c1548f61-f4a3-4813-94bc-f63ee1a74301</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943633432332"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943633432332"><gml:beginPosition>2025-12-17T03:43:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:43:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943633432332"><event:series>A</event:series><event:number>3560</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:affectedFIR>KZNY</event:affectedFIR><event:selectionCode>QMXXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4051N07404W</event:coordinates><event:radius>005</event:radius><event:location>TEB</event:location><event:effectiveStart>202512170343</event:effectiveStart><event:effectiveEnd>202512180343</event:effectiveEnd><event:text>TEB TWY L HOLD PAD FICON PATCHY ICE 12IN SNOWBANKS OBS AT
+2512170343.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943633432332"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3560/25 NOTAMN
+Q) KZNY/QMXXX////000/999/4051N07404W005
+A) KTEB
+B) 2512170343
+C) 2512180343
+E) TEB TWY L HOLD PAD FICON PATCHY ICE 12IN SNOWBANKS OBS AT
+2512170343.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943633432332"><fnse:classification>INTL</fnse:classification><fnse:accountId>KTEB</fnse:accountId><fnse:xoveraccountID>TEB</fnse:xoveraccountID><fnse:xovernotamID>12/245</fnse:xovernotamID><fnse:airportname>TETERBORO</fnse:airportname><fnse:originID>KTEB</fnse:originID><fnse:lastUpdated>2025-12-17T03:53:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KTEB</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943651852234"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943651852234"><gml:identifier codeSpace="urn:uuid:">ba75446c-8e84-4bff-aa5e-32a9e747299f</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943651852234"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943651852234"><gml:beginPosition>2025-12-17T03:30:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:30:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943651852234"><event:series>SWUU</event:series><event:number>3660</event:number><event:year>2025</event:year><event:issued>2025-12-17T03:53:00.000Z</event:issued><event:location>UUDD</event:location><event:effectiveStart>202512170330</event:effectiveStart><event:effectiveEnd>202512180330</event:effectiveEnd><event:text>C)13R F)5/5/5 G)2/2/2 H)5/5/5 N)5
+R)5 S)12180330)</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943651852234"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+SWUU3660 UUDD 12170330
+(SNOWTAM 3660
+A)UUDD B)12170330
+C)13R F)5/5/5 G)2/2/2 H)5/5/5 N)5
+R)5 S)12180330)
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943651852234"><fnse:classification>INTL</fnse:classification><fnse:accountId>SNOWTAM</fnse:accountId><fnse:airportname>DOMODEDOVO</fnse:airportname><fnse:originID>UUUUYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:53:00.000Z</fnse:lastUpdated><fnse:icaoLocation>UUDD</fnse:icaoLocation><fnse:snowtamCountryCode>UU</fnse:snowtamCountryCode></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943651707573"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943651707573"><gml:identifier codeSpace="urn:uuid:">d2ce62d6-8b09-4315-8789-e5ed70366872</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943651707573"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943651707573"><gml:beginPosition>2025-12-17T03:44:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:44:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943651707573"><event:series>A</event:series><event:number>3562</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:53:00.000Z</event:issued><event:affectedFIR>KZNY</event:affectedFIR><event:selectionCode>QMXXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4051N07404W</event:coordinates><event:radius>005</event:radius><event:location>TEB</event:location><event:effectiveStart>202512170344</event:effectiveStart><event:effectiveEnd>202512180344</event:effectiveEnd><event:text>TEB TWY V FICON 12IN SNOWBANKS OBS AT 2512170344.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943651707573"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3562/25 NOTAMN
+Q) KZNY/QMXXX////000/999/4051N07404W005
+A) KTEB
+B) 2512170344
+C) 2512180344
+E) TEB TWY V FICON 12IN SNOWBANKS OBS AT 2512170344.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943651707573"><fnse:classification>INTL</fnse:classification><fnse:accountId>KTEB</fnse:accountId><fnse:xoveraccountID>TEB</fnse:xoveraccountID><fnse:xovernotamID>12/246</fnse:xovernotamID><fnse:airportname>TETERBORO</fnse:airportname><fnse:originID>KTEB</fnse:originID><fnse:lastUpdated>2025-12-17T03:53:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KTEB</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943651709821"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943651709821"><gml:identifier codeSpace="urn:uuid:">c46e8cd3-4d83-4eaa-ae30-c7da4f444f40</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943651709821"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943651709821"><gml:beginPosition>2025-12-17T03:43:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:43:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943651709821"><event:series>A</event:series><event:number>3561</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:affectedFIR>KZNY</event:affectedFIR><event:selectionCode>QMXXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4051N07404W</event:coordinates><event:radius>005</event:radius><event:location>TEB</event:location><event:effectiveStart>202512170343</event:effectiveStart><event:effectiveEnd>202512180343</event:effectiveEnd><event:text>TEB TWY A HOLD PAD FICON PATCHY ICE 12IN SNOWBANKS OBS AT
+2512170343.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943651709821"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3561/25 NOTAMN
+Q) KZNY/QMXXX////000/999/4051N07404W005
+A) KTEB
+B) 2512170343
+C) 2512180343
+E) TEB TWY A HOLD PAD FICON PATCHY ICE 12IN SNOWBANKS OBS AT
+2512170343.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943651709821"><fnse:classification>INTL</fnse:classification><fnse:accountId>KTEB</fnse:accountId><fnse:xoveraccountID>TEB</fnse:xoveraccountID><fnse:xovernotamID>12/244</fnse:xovernotamID><fnse:airportname>TETERBORO</fnse:airportname><fnse:originID>KTEB</fnse:originID><fnse:lastUpdated>2025-12-17T03:53:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KTEB</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943695944601"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943695944601"><gml:identifier codeSpace="urn:uuid:">2e06db86-cb5e-400e-9f0e-a98b1270e044</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943695944601"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943695944601"><gml:beginPosition>2025-12-17T04:00:00.000Z</gml:beginPosition><gml:endPosition>2025-12-19T04:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943695944601"><event:series>B</event:series><event:number>9401</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:54:00.000Z</event:issued><event:affectedFIR>NZZC</event:affectedFIR><event:selectionCode>QFAHW</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4118S17313E</event:coordinates><event:radius>005</event:radius><event:location>NZNS</event:location><event:effectiveStart>202512170400</event:effectiveStart><event:effectiveEnd>202512190400</event:effectiveEnd><event:text>AD WIP ADJ ACFT STAND 2, PERSONNEL AND EQPT OPR.
+AREA MARKED BY BARRIERS</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943695944601"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+B9401/25 NOTAMN
+Q) NZZC/QFAHW/IV/NBO/A /000/999/4118S17313E005
+A) NZNS B) 2512170400 C) 2512190400
+E) AD WIP ADJ ACFT STAND 2, PERSONNEL AND EQPT OPR.
+AREA MARKED BY BARRIERS
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943695944601"><fnse:classification>INTL</fnse:classification><fnse:accountId>NZCHYNYX</fnse:accountId><fnse:airportname>NELSON</fnse:airportname><fnse:originID>NZCHYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>NZNS</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943698865796"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943698865796"><gml:identifier codeSpace="urn:uuid:">6f7e4e69-6e3d-446f-9318-04500cb3bbb7</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943698865796"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943698865796"><gml:beginPosition>2025-12-17T03:54:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T11:54:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943698865796"><event:series>A</event:series><event:number>6730</event:number><event:year>2025</event:year><event:type>R</event:type><event:issued>2025-12-17T03:54:00.000Z</event:issued><event:affectedFIR>CZWG</event:affectedFIR><event:selectionCode>QFAXX</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4822N08919W</event:coordinates><event:radius>005</event:radius><event:location>CYQT</event:location><event:effectiveStart>202512170354</event:effectiveStart><event:effectiveEnd>202512171154</event:effectiveEnd><event:text>RSC 07 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. C.R.F.I. 
+ABOVE 0.5. SWEEPING IN PROGRESS. VALID DEC 17 0343 - DEC 17 1143.
+
+RSC 25 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. C.R.F.I. 
+ABOVE 0.5. SWEEPING IN PROGRESS. VALID DEC 17 0343 - DEC 17 1143.
+
+RSC 12 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. C.R.F.I. 
+ABOVE 0.5. SWEEPING IN PROGRESS. VALID DEC 17 0353 - DEC 17 1153.
+
+RSC 30 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. C.R.F.I. 
+ABOVE 0.5. SWEEPING IN PROGRESS. VALID DEC 17 0353 - DEC 17 1153.
 
 ADDN NON-GRF/TALPA INFO:
 
-RMK: TWY HOTEL, 202512160414, COMPACTED SNOW. MAINLY ALONG THE 
-EDGES. TWY JULIET, 202512160415, DRY SNOW ON TOP OF ICE, 1/8IN. 
-SLIPPERY CONDITIONS ON TAXIWAY. TWY KILO, 202512160416, DRY SNOW 
-ON TOP OF ICE, 1/4IN. SLIPPERY CONDITIONS ON TAXIWAY.
-RMK: APN APRON, 202512160415, COMPACTED SNOW. TRAFFIC AREAS 
-SANDED. SLIPPERY CONDITIONS.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765858766196264"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
-S4810/25 NOTAMR S4772/25
-Q) CZQM/QFAXX/IV/NBO/A/000/999/4610N06003W005
-A) CYQY B) 2512160418 C) 2512160500
-E) RSC 18 6/6/6 10 PCT ICE, 10 PCT ICE, 10 PCT ICE. 120FT WIDTH. 
-REMAINING WIDTH COMPACTED SNOW. VALID DEC 16 0412 - DEC 16 1212.
+RMK: TWY ALPHA, BRAVO, CHARLIE, DELTA, DELTA NW, FOXTROT, GOLF, 
+HOTEL, HOTEL NE, HOTEL SW, 202512170352, WET. SLIPPERY 
+CONDITIONS. PATCHY CONTAMINANT. TWY ECHO, ECHO SE, 202512170353, 
+COMPACTED SNOW. SLIPPERY CONDITIONS. PATCHY CONTAMINANT.
+RMK: APN APRON I, APRON IA, APRON IB, APRON II, APRON VI, 
+202512170330, WATER ON TOP OF COMPACTED SNOW, 1/8IN. SLIPPERY 
+CONDITIONS. PATCHY CONTAMINANT.
+RMK: SWEEPING IN PROGRESS.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943698865796"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A6730/25 NOTAMR A6681/25
+Q) CZWG/QFAXX/IV/NBO/A/000/999/4822N08919W005
+A) CYQT B) 2512170354 C) 2512171154
+E) RSC 07 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. C.R.F.I. 
+ABOVE 0.5. SWEEPING IN PROGRESS. VALID DEC 17 0343 - DEC 17 1143.
 
-RSC 36 6/6/6 10 PCT ICE, 10 PCT ICE, 10 PCT ICE. 120FT WIDTH. 
-REMAINING WIDTH COMPACTED SNOW. VALID DEC 16 0412 - DEC 16 1212.
+RSC 25 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. C.R.F.I. 
+ABOVE 0.5. SWEEPING IN PROGRESS. VALID DEC 17 0343 - DEC 17 1143.
+
+RSC 12 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. C.R.F.I. 
+ABOVE 0.5. SWEEPING IN PROGRESS. VALID DEC 17 0353 - DEC 17 1153.
+
+RSC 30 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. C.R.F.I. 
+ABOVE 0.5. SWEEPING IN PROGRESS. VALID DEC 17 0353 - DEC 17 1153.
 
 ADDN NON-GRF/TALPA INFO:
 
-RMK: TWY HOTEL, 202512160414, COMPACTED SNOW. MAINLY ALONG THE 
-EDGES. TWY JULIET, 202512160415, DRY SNOW ON TOP OF ICE, 1/8IN. 
-SLIPPERY CONDITIONS ON TAXIWAY. TWY KILO, 202512160416, DRY SNOW 
-ON TOP OF ICE, 1/4IN. SLIPPERY CONDITIONS ON TAXIWAY.
-RMK: APN APRON, 202512160415, COMPACTED SNOW. TRAFFIC AREAS 
-SANDED. SLIPPERY CONDITIONS.
-&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765858766196264"><fnse:classification>INTL</fnse:classification><fnse:accountId>CYHQYNYX</fnse:accountId><fnse:airportname>SYDNEY</fnse:airportname><fnse:originID>CYHQYNYX</fnse:originID><fnse:lastUpdated>2025-12-16T04:18:00.000Z</fnse:lastUpdated><fnse:icaoLocation>CYQY</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+RMK: TWY ALPHA, BRAVO, CHARLIE, DELTA, DELTA NW, FOXTROT, GOLF, 
+HOTEL, HOTEL NE, HOTEL SW, 202512170352, WET. SLIPPERY 
+CONDITIONS. PATCHY CONTAMINANT. TWY ECHO, ECHO SE, 202512170353, 
+COMPACTED SNOW. SLIPPERY CONDITIONS. PATCHY CONTAMINANT.
+RMK: APN APRON I, APRON IA, APRON IB, APRON II, APRON VI, 
+202512170330, WATER ON TOP OF COMPACTED SNOW, 1/8IN. SLIPPERY 
+CONDITIONS. PATCHY CONTAMINANT.
+RMK: SWEEPING IN PROGRESS.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943698865796"><fnse:classification>INTL</fnse:classification><fnse:accountId>CYHQYNYX</fnse:accountId><fnse:airportname>THUNDER BAY</fnse:airportname><fnse:originID>CYHQYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>CYQT</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943699065698"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943699065698"><gml:identifier codeSpace="urn:uuid:">c3226d95-4009-467d-8025-0c4b42570912</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943699065698"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943699065698"><gml:beginPosition>2025-12-17T03:50:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T11:50:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943699065698"><event:series>S</event:series><event:number>5030</event:number><event:year>2025</event:year><event:type>R</event:type><event:issued>2025-12-17T03:53:00.000Z</event:issued><event:affectedFIR>CZYZ</event:affectedFIR><event:selectionCode>QFAXX</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4341N07938W</event:coordinates><event:radius>005</event:radius><event:location>CYYZ</event:location><event:effectiveStart>202512170350</event:effectiveStart><event:effectiveEnd>202512171150</event:effectiveEnd><event:text> RSC 05 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0347 - DEC 17 1147.
+
+RSC 23 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0347 - DEC 17 1147.
+
+RSC 06L 5/5/5 75 PCT WET, 75 PCT WET, 75 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0348 - DEC 17 1148.
+
+RSC 24R 5/5/5 75 PCT WET, 75 PCT WET, 75 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0348 - DEC 17 1148.
+
+RSC 06R 5/5/5 60 PCT WET, 60 PCT WET, 60 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0348 - DEC 17 1148.
+
+RSC 24L 5/5/5 60 PCT WET, 60 PCT WET, 60 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0348 - DEC 17 1148.
+
+RSC 15L 5/5/5 50 PCT WET, 70 PCT WET, 100 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0349 - DEC 17 1149.
+END PART 1 OF 2&#13;
+RSC 33R 5/5/5 100 PCT WET, 70 PCT WET, 50 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0349 - DEC 17 1149.
+
+RSC 15R 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICALLY TREATED. VALID DEC 17 
+0350 - DEC 17 1150.
+
+RSC 33L 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICALLY TREATED. VALID DEC 17
+ 0350 - DEC 17 1150.
+
+ADDN NON-GRF/TALPA INFO:
+END PART 2 OF 2&#13;
+</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943699065698"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+S5030/25 NOTAMR S4991/25
+Q) CZYZ/QFAXX/IV/NBO/A/000/999/4341N07938W005
+A) CYYZ PART 1 OF 2 B) 2512170350 C) 2512171150
+E) RSC 05 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0347 - DEC 17 1147.
+
+RSC 23 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0347 - DEC 17 1147.
+
+RSC 06L 5/5/5 75 PCT WET, 75 PCT WET, 75 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0348 - DEC 17 1148.
+
+RSC 24R 5/5/5 75 PCT WET, 75 PCT WET, 75 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0348 - DEC 17 1148.
+
+RSC 06R 5/5/5 60 PCT WET, 60 PCT WET, 60 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0348 - DEC 17 1148.
+
+RSC 24L 5/5/5 60 PCT WET, 60 PCT WET, 60 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0348 - DEC 17 1148.
+
+RSC 15L 5/5/5 50 PCT WET, 70 PCT WET, 100 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0349 - DEC 17 1149.
+END PART 1 OF 2&#13;
+S5030/25 NOTAMR S4991/25
+Q) CZYZ/QFAXX/IV/NBO/A/000/999/4341N07938W005
+A) CYYZ PART 2 OF 2 B) 2512170350 C) 2512171150
+E) RSC 33R 5/5/5 100 PCT WET, 70 PCT WET, 50 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICAL RESIDUE PRESENT. VALID 
+DEC 17 0349 - DEC 17 1149.
+
+RSC 15R 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICALLY TREATED. VALID DEC 17 
+0350 - DEC 17 1150.
+
+RSC 33L 5/5/5 100 PCT WET, 100 PCT WET, 100 PCT WET. 180FT WIDTH. 
+REMAINING WIDTH COMPACTED SNOW. CHEMICALLY TREATED. VALID DEC 17
+ 0350 - DEC 17 1150.
+
+ADDN NON-GRF/TALPA INFO:
+END PART 2 OF 2
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943699065698"><fnse:classification>INTL</fnse:classification><fnse:accountId>CYHQYNYX</fnse:accountId><fnse:airportname>LESTER B. PEARSON INTL</fnse:airportname><fnse:originID>CYHQYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>CYYZ</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943698863453"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943698863453"><gml:identifier codeSpace="urn:uuid:">02639e03-3f9f-4720-9536-d3df9d224050</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943698863453"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943698863453"><gml:beginPosition>2025-12-17T03:45:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:45:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943698863453"><event:series>A</event:series><event:number>3563</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:54:00.000Z</event:issued><event:affectedFIR>KZNY</event:affectedFIR><event:selectionCode>QMXXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4051N07404W</event:coordinates><event:radius>005</event:radius><event:location>TEB</event:location><event:effectiveStart>202512170345</event:effectiveStart><event:effectiveEnd>202512180345</event:effectiveEnd><event:text>TEB TWY L4 FICON PATCHY COMPACTED SN OBS AT 2512170345.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943698863453"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3563/25 NOTAMN
+Q) KZNY/QMXXX////000/999/4051N07404W005
+A) KTEB
+B) 2512170345
+C) 2512180345
+E) TEB TWY L4 FICON PATCHY COMPACTED SN OBS AT 2512170345.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943698863453"><fnse:classification>INTL</fnse:classification><fnse:accountId>KTEB</fnse:accountId><fnse:xoveraccountID>TEB</fnse:xoveraccountID><fnse:xovernotamID>12/247</fnse:xovernotamID><fnse:airportname>TETERBORO</fnse:airportname><fnse:originID>KTEB</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KTEB</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943651707573"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943651707573"><gml:identifier codeSpace="urn:uuid:">fe41c537-1fba-4b58-982b-c2cf34228849</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943651707573"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943651707573"><gml:beginPosition>2025-12-17T03:44:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:44:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943651707573"><event:series>A</event:series><event:number>3562</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:53:00.000Z</event:issued><event:affectedFIR>KZNY</event:affectedFIR><event:selectionCode>QMXXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4051N07404W</event:coordinates><event:radius>005</event:radius><event:location>TEB</event:location><event:effectiveStart>202512170344</event:effectiveStart><event:effectiveEnd>202512180344</event:effectiveEnd><event:text>TEB TWY V FICON 12IN SNOWBANKS OBS AT 2512170344.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943651707573"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3562/25 NOTAMN
+Q) KZNY/QMXXX////000/999/4051N07404W005
+A) KTEB
+B) 2512170344
+C) 2512180344
+E) TEB TWY V FICON 12IN SNOWBANKS OBS AT 2512170344.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943651707573"><fnse:classification>INTL</fnse:classification><fnse:accountId>KTEB</fnse:accountId><fnse:xoveraccountID>TEB</fnse:xoveraccountID><fnse:xovernotamID>12/246</fnse:xovernotamID><fnse:airportname>TETERBORO</fnse:airportname><fnse:originID>KTEB</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KTEB</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943699187654"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943699187654"><gml:identifier codeSpace="urn:uuid:">ad9bec39-29a4-402b-a34f-b42593bfe34b</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943699187654"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943699187654"><gml:beginPosition>2025-12-17T03:33:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T11:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943699187654"><event:series>A</event:series><event:number>1890</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:54:00.000Z</event:issued><event:affectedFIR>KZBW</event:affectedFIR><event:selectionCode>QMXHW</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4222N07100W</event:coordinates><event:radius>005</event:radius><event:location>BOS</event:location><event:effectiveStart>202512170333</event:effectiveStart><event:effectiveEnd>202512171100</event:effectiveEnd><event:text>BOS TWY A, B, E, K WIP MAINT</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943699187654"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A1890/25 NOTAMN
+Q) KZBW/QMXHW////000/999/4222N07100W005
+A) KBOS
+B) 2512170333
+C) 2512171100
+E) BOS TWY A, B, E, K WIP MAINT
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943699187654"><fnse:classification>INTL</fnse:classification><fnse:accountId>KBOS</fnse:accountId><fnse:xoveraccountID>BOS</fnse:xoveraccountID><fnse:xovernotamID>12/355</fnse:xovernotamID><fnse:airportname>GENERAL EDWARD LAWRENCE LOGAN INTL</fnse:airportname><fnse:originID>KBOS</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KBOS</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943651709821"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943651709821"><gml:identifier codeSpace="urn:uuid:">56d56cc9-cee6-4863-8411-0cb467288cea</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943651709821"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943651709821"><gml:beginPosition>2025-12-17T03:43:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:43:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943651709821"><event:series>A</event:series><event:number>3561</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:52:00.000Z</event:issued><event:affectedFIR>KZNY</event:affectedFIR><event:selectionCode>QMXXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4051N07404W</event:coordinates><event:radius>005</event:radius><event:location>TEB</event:location><event:effectiveStart>202512170343</event:effectiveStart><event:effectiveEnd>202512180343</event:effectiveEnd><event:text>TEB TWY A HOLD PAD FICON PATCHY ICE 12IN SNOWBANKS OBS AT
+2512170343.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943651709821"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3561/25 NOTAMN
+Q) KZNY/QMXXX////000/999/4051N07404W005
+A) KTEB
+B) 2512170343
+C) 2512180343
+E) TEB TWY A HOLD PAD FICON PATCHY ICE 12IN SNOWBANKS OBS AT
+2512170343.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943651709821"><fnse:classification>INTL</fnse:classification><fnse:accountId>KTEB</fnse:accountId><fnse:xoveraccountID>TEB</fnse:xoveraccountID><fnse:xovernotamID>12/244</fnse:xovernotamID><fnse:airportname>TETERBORO</fnse:airportname><fnse:originID>KTEB</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KTEB</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943701974640"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943701974640"><gml:identifier codeSpace="urn:uuid:">52da9008-be6f-45ef-899b-84b8045ff7ea</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943701974640"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943701974640"><gml:beginPosition>2025-12-17T03:44:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:44:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943701974640"><event:series>A</event:series><event:number>3914</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:54:00.000Z</event:issued><event:affectedFIR>KZBW</event:affectedFIR><event:selectionCode>QMRXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4256N07126W</event:coordinates><event:radius>005</event:radius><event:location>MHT</event:location><event:effectiveStart>202512170344</event:effectiveStart><event:effectiveEnd>202512180344</event:effectiveEnd><event:text>MHT RWY 24 FICON DRY 120FT WID REMAINDER COMPACTED SN OBS AT
+2512170344.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943701974640"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3914/25 NOTAMN
+Q) KZBW/QMRXX////000/999/4256N07126W005
+A) KMHT
+B) 2512170344
+C) 2512180344
+E) MHT RWY 24 FICON DRY 120FT WID REMAINDER COMPACTED SN OBS AT
+2512170344.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943701974640"><fnse:classification>INTL</fnse:classification><fnse:accountId>KMHT</fnse:accountId><fnse:xoveraccountID>MHT</fnse:xoveraccountID><fnse:xovernotamID>12/353</fnse:xovernotamID><fnse:airportname>MANCHESTER BOSTON RGNL</fnse:airportname><fnse:originID>KMHT</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KMHT</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943745678516"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943745678516"><gml:identifier codeSpace="urn:uuid:">56d96fe6-35a8-449a-9ee0-26a0386c4652</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943745678516"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943745678516"><gml:beginPosition>2025-12-17T03:46:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:46:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943745678516"><event:series>A</event:series><event:number>3915</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:54:00.000Z</event:issued><event:affectedFIR>KZBW</event:affectedFIR><event:selectionCode>QMRXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4256N07126W</event:coordinates><event:radius>005</event:radius><event:location>MHT</event:location><event:effectiveStart>202512170346</event:effectiveStart><event:effectiveEnd>202512180346</event:effectiveEnd><event:text>MHT RWY 17 FICON DRY 120FT WID REMAINDER COMPACTED SN OBS AT
+2512170346.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943745678516"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3915/25 NOTAMN
+Q) KZBW/QMRXX////000/999/4256N07126W005
+A) KMHT
+B) 2512170346
+C) 2512180346
+E) MHT RWY 17 FICON DRY 120FT WID REMAINDER COMPACTED SN OBS AT
+2512170346.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943745678516"><fnse:classification>INTL</fnse:classification><fnse:accountId>KMHT</fnse:accountId><fnse:xoveraccountID>MHT</fnse:xoveraccountID><fnse:xovernotamID>12/354</fnse:xovernotamID><fnse:airportname>MANCHESTER BOSTON RGNL</fnse:airportname><fnse:originID>KMHT</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KMHT</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943745664341"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943745664341"><gml:identifier codeSpace="urn:uuid:">95422732-5ec4-4585-a40b-f8095d3546ed</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943745664341"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943745664341"><gml:beginPosition>2025-12-17T03:48:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:48:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943745664341"><event:series>A</event:series><event:number>3917</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:54:00.000Z</event:issued><event:affectedFIR>KZBW</event:affectedFIR><event:selectionCode>QMNXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4256N07126W</event:coordinates><event:radius>005</event:radius><event:location>MHT</event:location><event:effectiveStart>202512170348</event:effectiveStart><event:effectiveEnd>202512180348</event:effectiveEnd><event:text>MHT APRON ALL FICON PATCHY ICE AND PATCHY COMPACTED SN BA MEDIUM
+OBS AT 2512170348.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943745664341"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3917/25 NOTAMN
+Q) KZBW/QMNXX////000/999/4256N07126W005
+A) KMHT
+B) 2512170348
+C) 2512180348
+E) MHT APRON ALL FICON PATCHY ICE AND PATCHY COMPACTED SN BA MEDIUM
+OBS AT 2512170348.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943745664341"><fnse:classification>INTL</fnse:classification><fnse:accountId>KMHT</fnse:accountId><fnse:xoveraccountID>MHT</fnse:xoveraccountID><fnse:xovernotamID>12/356</fnse:xovernotamID><fnse:airportname>MANCHESTER BOSTON RGNL</fnse:airportname><fnse:originID>KMHT</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KMHT</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943699187654"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943699187654"><gml:identifier codeSpace="urn:uuid:">9dd8056c-abb9-4583-9265-c764fdca018a</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943699187654"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943699187654"><gml:beginPosition>2025-12-17T03:33:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T11:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943699187654"><event:series>A</event:series><event:number>1890</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:54:00.000Z</event:issued><event:affectedFIR>KZBW</event:affectedFIR><event:selectionCode>QMXHW</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4222N07100W</event:coordinates><event:radius>005</event:radius><event:location>BOS</event:location><event:effectiveStart>202512170333</event:effectiveStart><event:effectiveEnd>202512171100</event:effectiveEnd><event:text>BOS TWY A, B, E, K WIP MAINT</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943699187654"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A1890/25 NOTAMN
+Q) KZBW/QMXHW////000/999/4222N07100W005
+A) KBOS
+B) 2512170333
+C) 2512171100
+E) BOS TWY A, B, E, K WIP MAINT
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943699187654"><fnse:classification>INTL</fnse:classification><fnse:accountId>KBOS</fnse:accountId><fnse:xoveraccountID>BOS</fnse:xoveraccountID><fnse:xovernotamID>12/355</fnse:xovernotamID><fnse:airportname>GENERAL EDWARD LAWRENCE LOGAN INTL</fnse:airportname><fnse:originID>KBOS</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KBOS</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943745680834"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943745680834"><gml:identifier codeSpace="urn:uuid:">6f9dfca5-f0b1-41e8-a57b-5bdd70cb76b6</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943745680834"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943745680834"><gml:beginPosition>2025-12-17T03:47:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:47:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943745680834"><event:series>A</event:series><event:number>3916</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:54:00.000Z</event:issued><event:affectedFIR>KZBW</event:affectedFIR><event:selectionCode>QMXXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4256N07126W</event:coordinates><event:radius>005</event:radius><event:location>MHT</event:location><event:effectiveStart>202512170347</event:effectiveStart><event:effectiveEnd>202512180347</event:effectiveEnd><event:text>MHT TWY ALL FICON PATCHY ICE AND PATCHY COMPACTED SN BA GOOD TO
+MEDIUM OBS AT 2512170347.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943745680834"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3916/25 NOTAMN
+Q) KZBW/QMXXX////000/999/4256N07126W005
+A) KMHT
+B) 2512170347
+C) 2512180347
+E) MHT TWY ALL FICON PATCHY ICE AND PATCHY COMPACTED SN BA GOOD TO
+MEDIUM OBS AT 2512170347.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943745680834"><fnse:classification>INTL</fnse:classification><fnse:accountId>KMHT</fnse:accountId><fnse:xoveraccountID>MHT</fnse:xoveraccountID><fnse:xovernotamID>12/355</fnse:xovernotamID><fnse:airportname>MANCHESTER BOSTON RGNL</fnse:airportname><fnse:originID>KMHT</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KMHT</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943698863453"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943698863453"><gml:identifier codeSpace="urn:uuid:">7779bc0a-1e88-4bdb-b030-fb97fb3b84ed</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943698863453"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943698863453"><gml:beginPosition>2025-12-17T03:45:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:45:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943698863453"><event:series>A</event:series><event:number>3563</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:54:00.000Z</event:issued><event:affectedFIR>KZNY</event:affectedFIR><event:selectionCode>QMXXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4051N07404W</event:coordinates><event:radius>005</event:radius><event:location>TEB</event:location><event:effectiveStart>202512170345</event:effectiveStart><event:effectiveEnd>202512180345</event:effectiveEnd><event:text>TEB TWY L4 FICON PATCHY COMPACTED SN OBS AT 2512170345.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943698863453"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3563/25 NOTAMN
+Q) KZNY/QMXXX////000/999/4051N07404W005
+A) KTEB
+B) 2512170345
+C) 2512180345
+E) TEB TWY L4 FICON PATCHY COMPACTED SN OBS AT 2512170345.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943698863453"><fnse:classification>INTL</fnse:classification><fnse:accountId>KTEB</fnse:accountId><fnse:xoveraccountID>TEB</fnse:xoveraccountID><fnse:xovernotamID>12/247</fnse:xovernotamID><fnse:airportname>TETERBORO</fnse:airportname><fnse:originID>KTEB</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KTEB</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943701974640"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943701974640"><gml:identifier codeSpace="urn:uuid:">72ce5b69-3470-4d47-91ec-ac7af25953d2</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943701974640"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943701974640"><gml:beginPosition>2025-12-17T03:44:00.000Z</gml:beginPosition><gml:endPosition>2025-12-18T03:44:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943701974640"><event:series>A</event:series><event:number>3914</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:54:00.000Z</event:issued><event:affectedFIR>KZBW</event:affectedFIR><event:selectionCode>QMRXX</event:selectionCode><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4256N07126W</event:coordinates><event:radius>005</event:radius><event:location>MHT</event:location><event:effectiveStart>202512170344</event:effectiveStart><event:effectiveEnd>202512180344</event:effectiveEnd><event:text>MHT RWY 24 FICON DRY 120FT WID REMAINDER COMPACTED SN OBS AT
+2512170344.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943701974640"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A3914/25 NOTAMN
+Q) KZBW/QMRXX////000/999/4256N07126W005
+A) KMHT
+B) 2512170344
+C) 2512180344
+E) MHT RWY 24 FICON DRY 120FT WID REMAINDER COMPACTED SN OBS AT
+2512170344.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943701974640"><fnse:classification>INTL</fnse:classification><fnse:accountId>KMHT</fnse:accountId><fnse:xoveraccountID>MHT</fnse:xoveraccountID><fnse:xovernotamID>12/353</fnse:xovernotamID><fnse:airportname>MANCHESTER BOSTON RGNL</fnse:airportname><fnse:originID>KMHT</fnse:originID><fnse:lastUpdated>2025-12-17T03:54:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KMHT</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943809430389"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943809430389"><gml:identifier codeSpace="urn:uuid:">9d616dd7-e93b-4523-a7d2-a353e095e3e6</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943809430389"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943809430389"><gml:beginPosition>2025-12-17T03:55:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T11:55:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943809430389"><event:series>A</event:series><event:number>6731</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:55:00.000Z</event:issued><event:affectedFIR>CZEG</event:affectedFIR><event:selectionCode>QFAXX</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>6701N12608W</event:coordinates><event:radius>005</event:radius><event:location>CYVL</event:location><event:effectiveStart>202512170355</event:effectiveStart><event:effectiveEnd>202512171155</event:effectiveEnd><event:text>RSC 17/35 60 PCT 1IN DRY SNOW ON TOP OF COMPACTED SNOW. 4FT 
+WINDROWS 40FT ALONG INSIDE WEST AND 40FT ALONG INSIDE EAST RWY 
+EDGE. 1INCH BLOWN SNOW PATCHES. VALID DEC 17 0353 - DEC 17 1153.
+
+ADDN NON-GRF/TALPA INFO:
+
+RMK: TWY ALPHA, 202512170355, COMPACTED SNOW.
+RMK: APN APRON I, 202512170355, COMPACTED SNOW.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943809430389"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A6731/25 NOTAMN
+Q) CZEG/QFAXX/IV/NBO/A/000/999/6701N12608W005
+A) CYVL B) 2512170355 C) 2512171155
+E) RSC 17/35 60 PCT 1IN DRY SNOW ON TOP OF COMPACTED SNOW. 4FT 
+WINDROWS 40FT ALONG INSIDE WEST AND 40FT ALONG INSIDE EAST RWY 
+EDGE. 1INCH BLOWN SNOW PATCHES. VALID DEC 17 0353 - DEC 17 1153.
+
+ADDN NON-GRF/TALPA INFO:
+
+RMK: TWY ALPHA, 202512170355, COMPACTED SNOW.
+RMK: APN APRON I, 202512170355, COMPACTED SNOW.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943809430389"><fnse:classification>INTL</fnse:classification><fnse:accountId>CYHQYNYX</fnse:accountId><fnse:airportname>COLVILLE LAKE / TOMMY KOCHON</fnse:airportname><fnse:originID>CYHQYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:56:00.000Z</fnse:lastUpdated><fnse:icaoLocation>CYVL</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943809713894"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943809713894"><gml:identifier codeSpace="urn:uuid:">698728ae-6fda-4c04-ad65-578d400f3ac8</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943809713894"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943809713894"><gml:beginPosition>2026-02-18T16:00:00.000Z</gml:beginPosition><gml:endPosition>2026-03-04T16:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943809713894"><event:series>N</event:series><event:number>4887</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:55:00.000Z</event:issued><event:affectedFIR>YBBB</event:affectedFIR><event:selectionCode>QPITT</event:selectionCode><event:traffic>I</event:traffic><event:purpose>BO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>1035S14217E</event:coordinates><event:radius>005</event:radius><event:location>YHID</event:location><event:effectiveStart>202602181600</event:effectiveStart><event:effectiveEnd>202603041600</event:effectiveEnd><event:text>TRIGGER NOTAM - AIP SUP H02/26
+HORN ISLAND AERODROME (YHID) REVISED PROCEDURES
+AVBL FM AIRSERVICES WEBSITE
+WWW.AIRSERVICESAUSTRALIA.COM/AIP/AIP.ASP</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943809713894"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+N4887/25 NOTAMN
+Q) YBBB/QPITT/I/BO/A/000/999/1035S14217E005
+A) YHID
+B) 2602181600 C) 2603041600
+E) TRIGGER NOTAM - AIP SUP H02/26
+HORN ISLAND AERODROME (YHID) REVISED PROCEDURES
+AVBL FM AIRSERVICES WEBSITE
+WWW.AIRSERVICESAUSTRALIA.COM/AIP/AIP.ASP
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943809713894"><fnse:classification>INTL</fnse:classification><fnse:accountId>YBBBZEZX</fnse:accountId><fnse:airportname>HORN ISLAND</fnse:airportname><fnse:originID>YBBBZEZX</fnse:originID><fnse:lastUpdated>2025-12-17T03:56:00.000Z</fnse:lastUpdated><fnse:icaoLocation>YHID</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943847047947"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943847047947"><gml:identifier codeSpace="urn:uuid:">d48fe766-f885-4c41-9df5-aa4d829d51da</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943847047947"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943847047947"><gml:beginPosition>2025-12-17T03:56:00.000Z</gml:beginPosition><gml:endPosition>2025-12-20T03:56:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943847047947"><event:series>A</event:series><event:number>8141</event:number><event:year>2025</event:year><event:type>C</event:type><event:issued>2025-12-17T03:56:00.000Z</event:issued><event:affectedFIR>KZAU</event:affectedFIR><event:selectionCode>QMRXX</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4159N08754W</event:coordinates><event:radius>005</event:radius><event:location>ORD</event:location><event:effectiveStart>202512170356</event:effectiveStart><event:effectiveEnd>202512200356</event:effectiveEnd><event:text>A8141/25 NOTAMC A8076/25 
+Q) KZAU/QMRXX/IV/NBO/A/000/999/4159N08754W005 
+A) KORD
+B) 2512170356
+E)  ORD RWY 04L/22R CLSD EXC TAX
+CANCELED</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943847047947"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+A8141/25 NOTAMC A8076/25 
+Q) KZAU/QMRXX/IV/NBO/A/000/999/4159N08754W005 
+A) KORD
+B) 2512170356
+E)  ORD RWY 04L/22R CLSD EXC TAX
+CANCELED
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943847047947"><fnse:classification>INTL</fnse:classification><fnse:accountId>KORD</fnse:accountId><fnse:airportname>CHICAGO O'HARE INTL</fnse:airportname><fnse:originID>KORD</fnse:originID><fnse:lastUpdated>2025-12-17T03:56:00.000Z</fnse:lastUpdated><fnse:icaoLocation>KORD</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943848135380"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943848135380"><gml:identifier codeSpace="urn:uuid:">0ea25648-7ef2-478d-9cfc-1ce459616761</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943848135380"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943848135380"><gml:beginPosition>2025-12-17T03:56:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T11:56:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943848135380"><event:series>S</event:series><event:number>5031</event:number><event:year>2025</event:year><event:type>R</event:type><event:issued>2025-12-17T03:56:00.000Z</event:issued><event:affectedFIR>CZYZ</event:affectedFIR><event:selectionCode>QFAXX</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>4310N07956W</event:coordinates><event:radius>005</event:radius><event:location>CYHM</event:location><event:effectiveStart>202512170356</event:effectiveStart><event:effectiveEnd>202512171156</event:effectiveEnd><event:text>RSC 06 6/6/6 10 PCT COMPACTED SNOW, 10 PCT COMPACTED SNOW AND 10 
+PCT 1/8IN DRY SNOW, 10 PCT 1/8IN DRY SNOW AND 10 PCT COMPACTED 
+SNOW. 130FT WIDTH. REMAINING WIDTH 4IN DRY SNOW ON TOP OF ICE. 
+VALID DEC 17 0337 - DEC 17 1137.
+
+RSC 24 6/6/6 10 PCT 1/8IN DRY SNOW AND 10 PCT COMPACTED SNOW, 10 
+PCT COMPACTED SNOW AND 10 PCT 1/8IN DRY SNOW, 10 PCT COMPACTED 
+SNOW. 130FT WIDTH. REMAINING WIDTH 4IN DRY SNOW ON TOP OF ICE. 
+VALID DEC 17 0337 - DEC 17 1137.
+
+RSC 12 6/6/6 DRY, DRY, 10 PCT 1/8IN DRY SNOW. 170FT WIDTH. 
+REMAINING WIDTH 4IN DRY SNOW ON TOP OF ICE. VALID DEC 17 0337 - 
+DEC 17 1137.
+
+RSC 30 6/6/6 10 PCT 1/8IN DRY SNOW, DRY, DRY. 170FT WIDTH. 
+REMAINING WIDTH 4IN DRY SNOW ON TOP OF ICE. VALID DEC 17 0337 - 
+DEC 17 1137.
+
+ADDN NON-GRF/TALPA INFO:
+CRFI 06 NR/NR/NR.
+CRFI 24 NR/NR/NR.
+CRFI 12 NR/NR/NR.
+CRFI 30 NR/NR/NR.
+
+RMK: TWY ALL USE CAUTION MANEUVERING SURFACES SLIPPERY.
+RMK: APN ALL USE CAUTION MANEUVERING SURFACES SLIPPERY.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943848135380"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+S5031/25 NOTAMR S4989/25
+Q) CZYZ/QFAXX/IV/NBO/A/000/999/4310N07956W005
+A) CYHM B) 2512170356 C) 2512171156
+E) RSC 06 6/6/6 10 PCT COMPACTED SNOW, 10 PCT COMPACTED SNOW AND 10 
+PCT 1/8IN DRY SNOW, 10 PCT 1/8IN DRY SNOW AND 10 PCT COMPACTED 
+SNOW. 130FT WIDTH. REMAINING WIDTH 4IN DRY SNOW ON TOP OF ICE. 
+VALID DEC 17 0337 - DEC 17 1137.
+
+RSC 24 6/6/6 10 PCT 1/8IN DRY SNOW AND 10 PCT COMPACTED SNOW, 10 
+PCT COMPACTED SNOW AND 10 PCT 1/8IN DRY SNOW, 10 PCT COMPACTED 
+SNOW. 130FT WIDTH. REMAINING WIDTH 4IN DRY SNOW ON TOP OF ICE. 
+VALID DEC 17 0337 - DEC 17 1137.
+
+RSC 12 6/6/6 DRY, DRY, 10 PCT 1/8IN DRY SNOW. 170FT WIDTH. 
+REMAINING WIDTH 4IN DRY SNOW ON TOP OF ICE. VALID DEC 17 0337 - 
+DEC 17 1137.
+
+RSC 30 6/6/6 10 PCT 1/8IN DRY SNOW, DRY, DRY. 170FT WIDTH. 
+REMAINING WIDTH 4IN DRY SNOW ON TOP OF ICE. VALID DEC 17 0337 - 
+DEC 17 1137.
+
+ADDN NON-GRF/TALPA INFO:
+CRFI 06 NR/NR/NR.
+CRFI 24 NR/NR/NR.
+CRFI 12 NR/NR/NR.
+CRFI 30 NR/NR/NR.
+
+RMK: TWY ALL USE CAUTION MANEUVERING SURFACES SLIPPERY.
+RMK: APN ALL USE CAUTION MANEUVERING SURFACES SLIPPERY.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943848135380"><fnse:classification>INTL</fnse:classification><fnse:accountId>CYHQYNYX</fnse:accountId><fnse:airportname>HAMILTON</fnse:airportname><fnse:originID>CYHQYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:56:00.000Z</fnse:lastUpdated><fnse:icaoLocation>CYHM</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943848134108"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943848134108"><gml:identifier codeSpace="urn:uuid:">7ac66400-437b-4acb-ae20-58b825736744</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943848134108"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943848134108"><gml:beginPosition>2025-12-17T03:56:00.000Z</gml:beginPosition><gml:endPosition indeterminatePosition="unknown">2026-03-17T04:00:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943848134108"><event:series>C</event:series><event:number>1381</event:number><event:year>2025</event:year><event:type>R</event:type><event:issued>2025-12-17T03:56:00.000Z</event:issued><event:affectedFIR>RPHI</event:affectedFIR><event:selectionCode>QMRXX</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>1011N12447E</event:coordinates><event:radius>005</event:radius><event:location>RPSM</event:location><event:effectiveStart>202512170356</event:effectiveStart><event:effectiveEnd>202603170400EST</event:effectiveEnd><event:text>TEMPO RWY PHYSICAL CHARACTERISTICS:
+
+RWY    TRUE BRG    RWY DIMENSIONS     THR COORD   THR ELEV
+NR                       (M)                       (FT)
+16    164.76 DEG     1305 X 30       101131.26N     334
+                                    1244653.49E
+34    344.76 DEG     1305 X 30       101050.27N     336
+                                    1244704.76E  
+
+RWY      SLOPE OF         SWY          CWY
+NR       RWY-SWY       DIMENSIONS   DIMENSIONS
+                          (M)          (M)
+16      0.0462 PCT      60 X 30     140 X 30
+         DOWNHILL
+34    TOWARDS THR 34       0         60 X 30.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943848134108"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+C1381/25 NOTAMR C0954/25
+Q) RPHI/QMRXX/IV/NBO/A /000/999/1011N12447E005
+A) RPSM B) 2512170356 C) 2603170400 EST
+E) TEMPO RWY PHYSICAL CHARACTERISTICS:
+
+RWY    TRUE BRG    RWY DIMENSIONS     THR COORD   THR ELEV
+NR                       (M)                       (FT)
+16    164.76 DEG     1305 X 30       101131.26N     334
+                                    1244653.49E
+34    344.76 DEG     1305 X 30       101050.27N     336
+                                    1244704.76E  
+
+RWY      SLOPE OF         SWY          CWY
+NR       RWY-SWY       DIMENSIONS   DIMENSIONS
+                          (M)          (M)
+16      0.0462 PCT      60 X 30     140 X 30
+         DOWNHILL
+34    TOWARDS THR 34       0         60 X 30.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943848134108"><fnse:classification>INTL</fnse:classification><fnse:accountId>RPLLYNYX</fnse:accountId><fnse:airportname>MAASIN</fnse:airportname><fnse:originID>EUECYIYN</fnse:originID><fnse:lastUpdated>2025-12-17T03:56:00.000Z</fnse:lastUpdated><fnse:icaoLocation>RPSM</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943884643812"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943884643812"><gml:identifier codeSpace="urn:uuid:">416b43c9-9e4f-4ce7-90fb-7a36849fdbd8</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943884643812"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943884643812"><gml:beginPosition>2025-12-17T03:56:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T11:56:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943884643812"><event:series>S</event:series><event:number>5032</event:number><event:year>2025</event:year><event:type>R</event:type><event:issued>2025-12-17T03:56:00.000Z</event:issued><event:affectedFIR>CZEG</event:affectedFIR><event:selectionCode>QFAXX</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>NBO</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>5107N11401W</event:coordinates><event:radius>005</event:radius><event:location>CYYC</event:location><event:effectiveStart>202512170356</event:effectiveStart><event:effectiveEnd>202512171156</event:effectiveEnd><event:text>RSC 11 6/6/6 DRY, 10 PCT WET, DRY. 180FT WIDTH. REMAINING WIDTH 
+ICE. VALID DEC 17 0350 - DEC 17 1150.
+
+RSC 29 6/6/6 DRY, 10 PCT WET, DRY. 180FT WIDTH. REMAINING WIDTH 
+ICE. VALID DEC 17 0350 - DEC 17 1150.
+
+RSC 17L 6/6/5 10 PCT WET, DRY, 60 PCT WET. 190FT WIDTH. REMAINING 
+WIDTH ICE. CHEMICAL RESIDUE PRESENT. VALID DEC 17 0345 - DEC 17 
+1145.
+
+RSC 35R 5/6/6 60 PCT WET, DRY, 10 PCT WET. 190FT WIDTH. REMAINING 
+WIDTH ICE. CHEMICAL RESIDUE PRESENT. VALID DEC 17 0345 - DEC 17 
+1145.
+
+RSC 17R 5/6/5 60 PCT WET, 10 PCT WET, 30 PCT WET. CHEMICAL 
+RESIDUE PRESENT. VALID DEC 17 0353 - DEC 17 1153.
+
+RSC 35L 5/6/5 30 PCT WET, 10 PCT WET, 60 PCT WET. CHEMICAL 
+RESIDUE PRESENT. VALID DEC 17 0353 - DEC 17 1153.
+
+ADDN NON-GRF/TALPA INFO:
+CRFI 11 NR/NR/NR.
+CRFI 29 NR/NR/NR.
+CRFI 17L NR/NR/NR.
+CRFI 35R NR/NR/NR.
+CRFI 17R NR/NR/NR.
+CRFI 35L NR/NR/NR.</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943884643812"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+S5032/25 NOTAMR S4988/25
+Q) CZEG/QFAXX/IV/NBO/A/000/999/5107N11401W005
+A) CYYC B) 2512170356 C) 2512171156
+E) RSC 11 6/6/6 DRY, 10 PCT WET, DRY. 180FT WIDTH. REMAINING WIDTH 
+ICE. VALID DEC 17 0350 - DEC 17 1150.
+
+RSC 29 6/6/6 DRY, 10 PCT WET, DRY. 180FT WIDTH. REMAINING WIDTH 
+ICE. VALID DEC 17 0350 - DEC 17 1150.
+
+RSC 17L 6/6/5 10 PCT WET, DRY, 60 PCT WET. 190FT WIDTH. REMAINING 
+WIDTH ICE. CHEMICAL RESIDUE PRESENT. VALID DEC 17 0345 - DEC 17 
+1145.
+
+RSC 35R 5/6/6 60 PCT WET, DRY, 10 PCT WET. 190FT WIDTH. REMAINING 
+WIDTH ICE. CHEMICAL RESIDUE PRESENT. VALID DEC 17 0345 - DEC 17 
+1145.
+
+RSC 17R 5/6/5 60 PCT WET, 10 PCT WET, 30 PCT WET. CHEMICAL 
+RESIDUE PRESENT. VALID DEC 17 0353 - DEC 17 1153.
+
+RSC 35L 5/6/5 30 PCT WET, 10 PCT WET, 60 PCT WET. CHEMICAL 
+RESIDUE PRESENT. VALID DEC 17 0353 - DEC 17 1153.
+
+ADDN NON-GRF/TALPA INFO:
+CRFI 11 NR/NR/NR.
+CRFI 29 NR/NR/NR.
+CRFI 17L NR/NR/NR.
+CRFI 35R NR/NR/NR.
+CRFI 17R NR/NR/NR.
+CRFI 35L NR/NR/NR.
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943884643812"><fnse:classification>INTL</fnse:classification><fnse:accountId>CYHQYNYX</fnse:accountId><fnse:airportname>CALGARY INTL</fnse:airportname><fnse:originID>CYHQYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:57:00.000Z</fnse:lastUpdated><fnse:icaoLocation>CYYC</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
+<AIXMBasicMessage xmlns="http://www.aixm.aero/schema/5.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:fns="urn:us.gov.dot.faa.aim.fns" xmlns:fnse="http://www.aixm.aero/schema/5.1/extensions/FAA/FNSE" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NMS_ID_1765943957737988"><gml:boundedBy xsi:nil="true"/><hasMember><event:Event gml:id="Event_1_1765943957737988"><gml:identifier codeSpace="urn:uuid:">b45d5ad3-b470-4784-b5b9-134186f750ab</gml:identifier><gml:boundedBy xsi:nil="true"/><event:timeSlice><event:EventTimeSlice gml:id="Event_TS_1_1765943957737988"><gml:validTime><gml:TimePeriod gml:id="Event_TS_TP_1_1765943957737988"><gml:beginPosition>2025-12-17T05:20:00.000Z</gml:beginPosition><gml:endPosition>2025-12-17T07:20:00.000Z</gml:endPosition></gml:TimePeriod></gml:validTime><aixm:interpretation>BASELINE</aixm:interpretation><aixm:sequenceNumber>1</aixm:sequenceNumber><aixm:correctionNumber>0</aixm:correctionNumber><event:scenario>6000</event:scenario><event:textNOTAM><event:NOTAM gml:id="NOTAM_1_1765943957737988"><event:series>L</event:series><event:number>5594</event:number><event:year>2025</event:year><event:type>N</event:type><event:issued>2025-12-17T03:58:00.000Z</event:issued><event:affectedFIR>RJJJ</event:affectedFIR><event:selectionCode>QMXLC</event:selectionCode><event:traffic>IV</event:traffic><event:purpose>M</event:purpose><event:scope>A</event:scope><event:minimumFL>000</event:minimumFL><event:maximumFL>999</event:maximumFL><event:coordinates>3448N13811E</event:coordinates><event:radius>005</event:radius><event:location>RJNS</event:location><event:effectiveStart>202512170520</event:effectiveStart><event:effectiveEnd>202512170720</event:effectiveEnd><event:text>TWY P2-CLSD DUE TO ENG RUNUP
+RMK/EXC ACFT WITH PRIOR PERMISSION</event:text><event:translation><event:NOTAMTranslation gml:id="NT02_1765943957737988"><event:type>OTHER:ICAO</event:type><event:formattedText><html:div xmlns:html="http://www.w3.org/1999/xhtml">&lt;pre&gt;
+L5594/25 NOTAMN
+Q) RJJJ/QMXLC/IV/M/A/000/999/3448N13811E005
+A) RJNS B) 2512170520 C) 2512170720
+E) TWY P2-CLSD DUE TO ENG RUNUP
+RMK/EXC ACFT WITH PRIOR PERMISSION
+&lt;/pre&gt;</html:div></event:formattedText></event:NOTAMTranslation></event:translation></event:NOTAM></event:textNOTAM><event:extension><fnse:EventExtension gml:id="ext_01_1765943957737988"><fnse:classification>INTL</fnse:classification><fnse:accountId>RJAAYNYX</fnse:accountId><fnse:airportname>SHIZUOKA</fnse:airportname><fnse:originID>RJAAYNYX</fnse:originID><fnse:lastUpdated>2025-12-17T03:58:00.000Z</fnse:lastUpdated><fnse:icaoLocation>RJNS</fnse:icaoLocation></fnse:EventExtension></event:extension></event:EventTimeSlice></event:timeSlice></event:Event></hasMember></AIXMBasicMessage>
 </FNS_Snapshot>

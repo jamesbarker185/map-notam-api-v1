@@ -9,17 +9,18 @@ class NotamTextParser:
     
     # Q-line Regex: Q) FIR/CODE/TRAFFIC/PURPOSE/SCOPE/LOWER/UPPER/COORDINATES(RADIUS)
     # Example: Q) KZAU/QMRLC/IV/NBO/A/000/999/4159N08754W005
+    # Q-line Regex: Q) FIR/CODE/TRAFFIC/PURPOSE/SCOPE/LOWER/UPPER/COORDINATES(RADIUS)
+    # Example: Q) KZAU/QMRLC/IV/NBO/A/000/999/4159N08754W005
     Q_LINE_REGEX = re.compile(
-        r"Q\)\s*"
+        r"(?:Q\)\s*)?" # Optional Q) prefix
         r"(?P<fir>[A-Z]{4})/"
-        r"(?P<code>[A-Z]{5})/"
+        r"(?P<code>Q[A-Z]{4})/" # Q-code always starts with Q
         r"(?P<traffic>[IV]{1,2})/"
         r"(?P<purpose>[NBOM]{1,3})/"
         r"(?P<scope>[AEW]{1,2})/"
-        r"(?P<lower>[0-9]{3})/"
-        r"(?P<upper>[0-9]{3})/"
-        r"(?P<coords>[0-9]{4}[NS][0-9]{5}[EW])"
-        r"(?P<radius>[0-9]{3})?"
+        r"((?P<lower>[0-9]{3})/(?P<upper>[0-9]{3}))?" # Optional Altitude
+        r"(?:/(?P<coords>[0-9]{4}[NS][0-9]{5}[EW]))?" # Optional Coords
+        r"(?P<radius>[0-9]{3})?" # Optional Radius
     )
     
     # NOTAM Code decoding (Partial list for common types)
@@ -77,10 +78,10 @@ class NotamTextParser:
             "traffic": data['traffic'],
             "purpose": data['purpose'],
             "scope": data['scope'],
-            "lower_fl": int(data['lower']),
-            "upper_fl": int(data['upper']),
+            "lower_fl": int(data['lower']) if data['lower'] else 0,
+            "upper_fl": int(data['upper']) if data['upper'] else 999,
             "raw_coords": data['coords'],
-            "radius_nm": int(data['radius']) if data['radius'] else 0,
+            "radius_nm": int(data['radius']) if data.get('radius') else 0,
             "category": category
         }
 
@@ -145,3 +146,47 @@ class NotamTextParser:
             lon_val = -lon_val
             
         return [lon_val, lat_val] # GeoJSON uses [Lon, Lat]
+
+    @staticmethod
+    def parse_validity_times(text):
+        """
+        Extracts start and end validity times from text.
+        Look for B) YYMMDDHHMM and C) YYMMDDHHMM, or standalone timestamps.
+        """
+        import datetime
+        
+        # Regex for B) and C) fields
+        # B) 2512160925 C) 2512161200
+        b_match = re.search(r"B\)\s*(\d{10})", text)
+        c_match = re.search(r"C\)\s*(\d{10}|PERM)", text)
+        
+        start_str = b_match.group(1) if b_match else None
+        end_str = c_match.group(1) if c_match else None
+        
+        # Fallback: Find any 10-digit sequence that looks like a date
+        # If strict B/C checks failed, try to guess from raw text
+        if not start_str or not end_str:
+            timestamps = re.findall(r"\b(\d{10})\b", text)
+            if len(timestamps) >= 1 and not start_str:
+                start_str = timestamps[0]
+            if len(timestamps) >= 2 and not end_str:
+                end_str = timestamps[1]
+
+        def convert_to_iso(dt_str):
+            if not dt_str: return None
+            if dt_str == "PERM": return None # Permanent
+            try:
+                # YYMMDDHHMM -> 20YY-MM-DDTHH:MM:00
+                year = int(dt_str[:2])
+                month = int(dt_str[2:4])
+                day = int(dt_str[4:6])
+                hour = int(dt_str[6:8])
+                minute = int(dt_str[8:10])
+                
+                # Assumption: 2000-2099
+                full_year = 2000 + year
+                return f"{full_year:04d}-{month:02d}-{day:02d}T{hour:02d}:{minute:02d}:00"
+            except:
+                return None
+
+        return convert_to_iso(start_str), convert_to_iso(end_str)
