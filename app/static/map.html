@@ -198,7 +198,9 @@
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v11', // Professional dark mode
         center: [-71.0096, 42.3656], // Default: KBOS
-        zoom: 10
+        zoom: 10,
+        pitch: 60, // 3D View
+        bearing: -17.6 // Initial bearing
     });
 
     // Navigation Controls
@@ -265,13 +267,14 @@
         });
 
         // Add Polygon Layer (for areas with radius)
+        // Add Polygon Layer (3D Extrusion)
         map.addLayer({
             'id': 'notam-areas',
-            'type': 'fill',
+            'type': 'fill-extrusion',
             'source': 'notams',
             'filter': ['==', '$type', 'Polygon'],
             'paint': {
-                'fill-color': [
+                'fill-extrusion-color': [
                     'match',
                     ['get', 'category'],
                     'Runway', '#FA5252',
@@ -281,8 +284,23 @@
                     'Airspace', '#228BE6',
                     '#868E96' // Default
                 ],
-                'fill-opacity': 0.3,
-                'fill-outline-color': '#fff'
+                'fill-extrusion-height': [
+                    '*', 
+                    ['get', 'upper_fl'], 
+                    30.48 // Convert FL (100ft) to Meters? Wait FL is 3 digits. FL005 = 500ft. 
+                    // No. FL is usually Hundreds of Feet.
+                    // FL300 = 30,000 ft.
+                    // FL005 = 500 ft.
+                    // 1 ft = 0.3048 m.
+                    // 100 ft = 30.48 m.
+                    // So FL * 30.48 = Meters. Correct.
+                ],
+                'fill-extrusion-base': [
+                    '*',
+                    ['get', 'lower_fl'],
+                    30.48
+                ],
+                'fill-extrusion-opacity': 0.6
             }
         });
 
@@ -346,11 +364,11 @@
 
         map.on('mouseenter', 'notam-points', showPopup);
         map.on('mouseleave', 'notam-points', hidePopup);
-        map.on('mouseenter', 'notam-polygons', showPopup);
-        map.on('mouseleave', 'notam-polygons', hidePopup);
+        map.on('mouseenter', 'notam-areas', showPopup);
+        map.on('mouseleave', 'notam-areas', hidePopup);
 
-        // Add click handlers for popups (Logic omitted for brevity, existing handlers remain)
-        map.on('click', 'notam-polygons', (e) => showPopup(e));
+        // Add click handlers for popups
+        map.on('click', 'notam-areas', (e) => showPopup(e));
         map.on('click', 'notam-points', (e) => showPopup(e));
         
         // Mouse cursor
@@ -466,9 +484,10 @@
                     <div class="detail-row"><span class="detail-label">Q-Code:</span> ${p.q_code || 'N/A'}</div>
                     <div class="detail-row"><span class="detail-label">Start:</span> ${formatDate(p.start_time)}</div>
                     <div class="detail-row"><span class="detail-label">End:</span> ${formatDate(p.end_time)}</div>
-                    <div class="detail-row"><span class="detail-label">Min Alt:</span> ${p.lower_fl || '000'} FL</div>
-                    <div class="detail-row"><span class="detail-label">Max Alt:</span> ${p.upper_fl || '999'} FL</div>
+                    <div class="detail-row"><span class="detail-label">Min Alt:</span> ${p.lower_fl !== undefined ? p.lower_fl : '0'} FL</div>
+                    <div class="detail-row"><span class="detail-label">Max Alt:</span> ${p.upper_fl !== undefined ? p.upper_fl : '0'} FL</div>
                     <div class="detail-row"><span class="detail-label">Radius:</span> ${p.radius_nm} NM</div>
+                    <div class="detail-row"><span class="detail-label">Location:</span> ${p.latitude !== undefined ? p.latitude.toFixed(4) : '?'}°, ${p.longitude !== undefined ? p.longitude.toFixed(4) : '?'}°</div>
                     
                     <div class="raw-text">${p.text}</div>
                     

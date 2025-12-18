@@ -79,7 +79,7 @@ class NotamTextParser:
             "purpose": data['purpose'],
             "scope": data['scope'],
             "lower_fl": int(data['lower']) if data['lower'] else 0,
-            "upper_fl": int(data['upper']) if data['upper'] else 999,
+            "upper_fl": int(data['upper']) if data['upper'] else 0, # Default to 0 per user request
             "raw_coords": data['coords'],
             "radius_nm": int(data['radius']) if data.get('radius') else 0,
             "category": category
